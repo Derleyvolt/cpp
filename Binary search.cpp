@@ -1,5 +1,5 @@
-﻿//   Assunto: Busca binária
-//      Site: https://www.hackerearth.com/practice/algorithms/searching/binary-search/tutorial/
+//   Assunto: Busca binária
+//     Fonte: https://www.hackerearth.com/practice/algorithms/searching/binary-search/tutorial/
 //   Opinião: Melhor site que encontrei explicando o algoritmo
 //      Data: 17/03/2018
 //     Autor: Desconhecido
