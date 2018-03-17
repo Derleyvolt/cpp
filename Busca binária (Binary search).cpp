@@ -47,3 +47,10 @@ int main()
     return 0;
 }
 
+// Requesito do algoritmo: os valores precisam estar ordenados.
+//
+// O algoritmo consiste basicamente em dividir o array ao meio e comparar se o valor da key é maior ou menor
+// do que o valor que está no meio, caso seja maior, a segunda metade do array é esquecida, caso seja menor, a
+// primeira metade do array é esquecida, e o processo se repete com a metade remanescente até que o valor seja
+// encontrado, e seu indice retorne, caso contrário, a função retorna -1.
+
