@@ -1,2 +1,3 @@
-# Helper
-Local onde guardo explicações encontradas pela internet com as minhas palavras..
+C++ Helper
+
+Repositório onde guardo minhas anotações sobre os principais conceitos da programação e sobre a linguagem C++
