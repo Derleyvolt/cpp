@@ -127,7 +127,8 @@ No* deleteNode(No* root, int key)
 }
     
 Detalhe: eu não busquei entender melhor o algoritmo para deletar elementos da árvore, meu conhecimento a cerca de
-         recursão ainda é bem limitado, então preferi deixar isso pro futuro..
+         recursão ainda é bem limitado, então preferi deixar isso pro futuro.. eu até consigo entender o algoritmo
+	 acima, mas com o meu conhecimento atual creio que não conseguiria reproduzir o mesmo algoritmo.
 
 
  ELEMENTOS DA ÁRVORE BINÁRIA DE BUSCA:
