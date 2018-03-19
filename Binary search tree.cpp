@@ -11,8 +11,8 @@
 
 MENOR VALOR DE UMA ÁRVORE BINÁRIA DE BUSCA: 
 
-É bastante simples. Apenas percorra a árvore da raiz até o nó esquerdo recursivamente até encontrar um nó esquerdo null.
-O nó cujo o membro left seja null é o nó que contém o menor valor..
+É bastante simples. Apenas percorra da raiz até o nó esquerdo recursivamente até encontrar um nó esquerdo null.
+O nó cujo o membro left/esquerdo seja null é o nó que contém o menor valor..
 
 int minValue(node* root) 
 {
