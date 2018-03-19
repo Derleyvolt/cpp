@@ -44,7 +44,7 @@ node* search(node* root, int key)
     return search(root->left, key);
 }
 
-INSERIR UM ELEMENTO EM UMA ÁRVORE BINÁRIA DE BUSCA: https:
+INSERIR UM ELEMENTO EM UMA ÁRVORE BINÁRIA DE BUSCA:
 
 Uma nova chave sempre é inserida em um nó folha. Nós começamos procurando a chave da raiz até encontrarmos um nó
 folha. Quando o nó folha é encontrado, um novo nó é adicionado a ele.
