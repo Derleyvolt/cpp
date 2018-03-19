@@ -1,7 +1,7 @@
 //   Assunto: Árvore binária de busca
 //      Site: https://www.geeksforgeeks.org/find-the-minimum-element-in-a-binary-search-tree/ & 
 //            https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/ &
-//            https://www.youtube.com/watch?v=gcULXE7ViZw      
+//            https://www.youtube.com/watch?v=gcULXE7ViZw - https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/    
 //   Opinião: 
 //      Data: 19/03/2018
 //     Autor: 
@@ -89,8 +89,47 @@ Essa é a operação mais complexa, existem três cenários neste caso:
 3 - O nó que será deletado tem dois filhos:
 
     Encontre o valor minimo da subarvore a direita, substitua pelo nó que será deletado e depois o delete.
+	    
+No* deleteNode(No* root, int key)
+{
+    if (root == NULL) return root;
+ 	    
+    // os dois primeiros if's servem para buscar o nó que contém a key 
+    if (key < root->key)
+        root->left = deleteNode(root->left, key);
+    else 
+	if (key > root->key)
+            root->right = deleteNode(root->right, key);	    
+    else
+    {
+        if (root->left == NULL)
+        {
+            struct node *temp = root->right;
+            delete root;
+            return temp;
+        }
+        else 
+	    if (root->right == NULL)
+            {
+                node *temp = root->left;
+                delete root;
+                return temp;
+            }
+	    
+        struct node* temp = minValueNode(root->right);
+ 
+        root->key = temp->key;
+ 
+        root->right = deleteNode(root->right, temp->key);
+    }
+	    
+    return root;
+}
     
-    
+Detalhe: eu não busquei entender melhor o algoritmo para deletar elementos da árvore, meu conhecimento a cerca de
+         recursão ainda é bem limitado, então preferi deixar isso pro futuro..
+
+
  ELEMENTOS DA ÁRVORE BINÁRIA DE BUSCA:
  
  
