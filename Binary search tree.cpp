@@ -26,8 +26,6 @@ int minValue(node* root)
    return(current->data);
 }
 
-
-
 BUSCAR UM ELEMENTO EM UMA ÁRVORE BINÁRIA DE BUSCA:
 
 Para procurar um dado valor em uma árvore binária de busca, nós primeiros comparamos o valor com a raiz,
@@ -51,29 +49,29 @@ INSERIR UM ELEMENTO EM UMA ÁRVORE BINÁRIA DE BUSCA: https:
 Uma nova chave sempre é inserida em um nó folha. Nós começamos procurando a chave da raiz até encontrarmos um nó
 folha. Quando o nó folha é encontrado, um novo nó é adicionado a ele.
 
-	void insert(No* root, int key)
+void insert(No* root, int key)
+{
+	if ( key < root->getKey() )
 	{
-		if ( key < root->getKey() )
+		if ( root->getLower() == nullptr )
 		{
-			if ( root->getLower() == nullptr )
-			{
-				No* root = new No(key);
-				root->setLower(root);
-			}
-			else
-				insert(root->getLower(), key);
+			No* root = new No(key);
+			root->setLower(root);
 		}
-		else if ( key > root->getKey() )
-		{
-			if ( root->getUpper() == nullptr )
-			{
-				No* root = new No(key);
-				root->setUpper(root);
-			}
-			else
-				insert(root->getUpper(), key);
-		}
+		else
+			insert(root->getLower(), key);
 	}
+	else if ( key > root->getKey() )
+	{
+		if ( root->getUpper() == nullptr )
+		{
+			No* root = new No(key);
+			root->setUpper(root);
+		}
+		else
+			insert(root->getUpper(), key);
+	}
+}
 
 DELETANDO UM NÓ DA ÁRVORE BINÁRIA DE BUSCA:
 
