@@ -1,1 +1,55 @@
 
+
+Árvore AVL é uma árvore binária de busca balanceada, ou seja, uma árvore balanceada(árvore completa) são as árvore que minimizam
+o número de comparações efetuadas no pior caso para uma busca. Contudo, para garantir essa propriedade em aplicações dinâmicas, é
+preciso reconstruir a árvore para seu estado ideal a cada operação sobre seus nós(inclusão ou exclusão).
+
+
+Uma rotação simples ocorre quando um nó está desbalanceado e seu filho 
+estiver no mesmo sentido da inclinação, formando uma linha reta.
+
+
+Rotação a esquerda:
+
+
+- O filho da direita da raiz vira a nova raiz.
+
+- A raiz original vira filho da esquerda da nova raiz.
+
+
+o seguinte nó desbalanceado ->
+
+  A                 
+   \         
+    B            
+     \
+      C
+
+aplicando-se a rotação a esquerda nele, ficaria assim:
+
+    B
+   / \
+  A   C
+
+
+se, por exemplo, o nó B tiver um filho da esquerda assim:
+
+  A
+   \
+    B
+   / \
+  D   C
+
+oque acontece nesse caso é, o filho da esquerda de B será agora filho
+da direita de A (D sempre será menor que B e maior que A)
+
+
+    B
+   / \
+  A   C
+   \
+    D
+
+
+
+A rotação a direita funciona exatamente da mesma maneira, porém, ao contrario.
