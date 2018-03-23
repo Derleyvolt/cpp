@@ -4,73 +4,111 @@
 o número de comparações efetuadas no pior caso para uma busca. Contudo, para garantir essa propriedade em aplicações dinâmicas, é
 preciso reconstruir a árvore para seu estado ideal a cada operação sobre seus nós(inclusão ou exclusão).
 
-
-Uma rotação simples ocorre quando um nó está desbalanceado e seu filho 
-estiver no mesmo sentido da inclinação, formando uma linha reta.
+-------------------------------------------------------------------------------------------------------------------------------------
 
 
-Rotação a esquerda:
+- ALTURA DE UMA ÁRVORE : altura de uma árvore é o caminho mais longo até seu nó folha.
 
+- ÁRVORE VAZIA POSSUI ALTURA -1.
 
-- O filho da direita da raiz vira a nova raiz.
+- FATOR DE BALANCEAMENTO : [altura do filho à direita] - [altura do filho à esquerda] é denominado fator de balanceamento, quando 
+                           um nó possui fator de balanço com valor -1, 0 ou 1 então o mesmo é um nó regulado.
 
-- A raiz original vira filho da esquerda da nova raiz.
+- ROTAÇÃO : uma rotação ocorre devido ao desbalanceamento da árvore avl.
 
+-----------------------------------------------------------------------------------------------------------------------
 
-o seguinte nó desbalanceado ->
+ROTAÇÃO SIMPLES:
 
-  A                 
-   \         
-    B            
-     \
-      C
+Raiz de uma subárvore com FB -2 (ou 2) e um nó filho com FB -1 (ou 1).
 
-aplicando-se a rotação a esquerda nele, ficaria assim:
+ - Os fatores de balanceamento têm sinais iguais:
+   * Subárvores de nó raiz e filho pendem para o mesmo lado, ou seja, se o nó que produz o desbalanceamento é filho de uma
+     subárvore mais externa.
 
-    B
-   / \
-  A   C
+       8  -> desbalanceamento ocorrendo aqui.                
+      / \         
+     4   10           
+    / \
+   2   6
+    \
+     3  -> causando o desbalanceamento.
+   
+   no(8).FB = -2      no(4).FB = -1
+   
+   utilize rotação a direita:
+   
+        4
+      /   \
+     2     8
+      \   / \
+       3 6   10
+     
+ E foi agora pertence a A.
+ B agora é o nó raiz.
 
+Quando subárvores do pai e filho pendem para um mesmo lado:
+* Rotação simples para o lado oposto
 
-se, por exemplo, o nó B tiver um filho da esquerda assim:
+ABS:
 
-  A
-   \
-    B
-   / \
-  D   C
+em um caso como esse ->
 
-oque acontece nesse caso é, o filho da esquerda de B será agora filho
-da direita de A (D sempre será menor que B e maior que A)
-
-
-    B
-   / \
-  A   C
-   \
-    D
-
-
-
-A rotação à direita funciona exatamente da mesma maneira, porém, ao contrário.
-
-
-1 - a altura de uma subarvore é o caminho mais longo até a folha.
-
-2 - fato de balanceamento se dar por hRight - hLeft.
-
-3 - árvore vazia é - 1.
-
-
-
-
-      A   -> Altura 2
+       10
+      /  
+     7   
+    / \ 
+   4   8
+ 
+ percebe que todos os valores a esquerda do nó 1 são menores que ele, então quando uma rotação à direita for executada,
+ o nó 8 é adotado pelo nó 1, assim:
+ 
+   7
+ /   \
+4     10
      /
-    B     -> Altura 1
-   /
-  C       -> Altura 0
+    8
+     
+----------------------------------------------------------------------------------------------------------------------------
+
+ROTAÇÃO DUPLA:
+
+Raiz de uma subárvore com FB -2 (ou 2) e um nó filho com FB 1 (ou -1).
+
+- Os fatores de balanceamento têm sinais opostos:
+  * Subárvore de nó raiz pende para um lado e subárvore de nó filho pende para o outro (ou o contrário).
 
 
+        8
+       / \ 
+      4   10
+     / \
+    2   6
+       /
+      5
+      
+      
+ no(8).FB = -2      n(4).FB = 1
+ 
+ Primeira rotação:
+ 
+ - Rotação do nó filho do nó desbalanceado para a esquerda(nó 4):
+ 
+ 
+        8
+       / \ 
+      6   10
+     / 
+    4   
+   / \  
+  2   5
 
-  O nó A não possui filho a direita, neste caso, a subarvore a direita possui
-  tamanho -1.
+ Segunda rotação:
+ 
+ - Rotação do nó pai para a direita(nó 8):
+ 
+        6
+       / \ 
+      4   8
+     / \   \
+    2   5   10
