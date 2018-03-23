@@ -52,4 +52,25 @@ da direita de A (D sempre será menor que B e maior que A)
 
 
 
-A rotação a direita funciona exatamente da mesma maneira, porém, ao contrario.
+A rotação à direita funciona exatamente da mesma maneira, porém, ao contrário.
+
+
+1 - a altura de uma subarvore é o caminho mais longo até a folha.
+
+2 - fato de balanceamento se dar por hRight - hLeft.
+
+3 - árvore vazia é - 1.
+
+
+
+
+      A   -> Altura 2
+     /
+    B     -> Altura 1
+   /
+  C       -> Altura 0
+
+
+
+  O nó A não possui filho a direita, neste caso, a subarvore a direita possui
+  tamanho -1.
