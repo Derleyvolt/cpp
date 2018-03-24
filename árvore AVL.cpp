@@ -1,4 +1,11 @@
-
+//   Assunto: Árvore binária de busca
+//      Site: https://www.youtube.com/watch?v=YkF76cOgtMQ&list=PLxI8Can9yAHf8k8LrUePyj0y3lLpigGcl&index=21 & 
+//            https://www.youtube.com/watch?v=NUNe0Mp1MVI&index=22&list=PLxI8Can9yAHf8k8LrUePyj0y3lLpigGcl &
+//            http://wiki.icmc.usp.br/images/f/fa/%C3%81rvores_AVL.pdf
+//   Opinião: 
+//      Data: 24/03/2018
+//     Autor: Desconhecido
+//       IDE: 
 
 Árvore AVL é uma árvore binária de busca balanceada, ou seja, uma árvore balanceada(árvore completa) são as árvore que minimizam
 o número de comparações efetuadas no pior caso para uma busca. Contudo, para garantir essa propriedade em aplicações dinâmicas, é
@@ -112,3 +119,79 @@ Raiz de uma subárvore com FB -2 (ou 2) e um nó filho com FB 1 (ou -1).
       4   8
      / \   \
     2   5   10
+    
+------------------------------------------------------------------------------------------------------------------------------------    
+    
+FUNÇÃO QUE RETORNA A ALTURA DE UMA SUBÁRVORE:    
+    
+int height(No *t) 
+{
+    if (t == NULL)
+        return 0;
+    else
+        return max(height(t->left), height(t->right)) + 1;
+}    
+
+para entender a recursividade função eu tive que pegar a imagem deste link 
+http://www.mathcs.emory.edu/~cheung/Courses/323/Syllabus/Trees/AVL-delete.html passei pro paint e fiquei tentando
+entender, basta pensar que cada nó é uma função height..
+
+FUNÇÃO DE ROTAÇÃO SIMPLES PARA À DIREITA:
+
+No* right(No* root)
+{
+	No* aux;
+
+	// essas 3 linhas seguintes executam uma 
+	// rotação simples para direita
+	aux      = root->left;
+	r->esq   = aux->right;
+	aux->dir = root;
+
+	// essas linhas apenas atribuem as novas alturas dos nós
+	// alterados
+	root->height = max(height(root->right), height(aux->left)) + 1;
+	aux->height  = max(height(aux->left), root->height) + 1;
+
+	return aux;
+}
+
+FUNÇÃO DE ROTAÇÃO SIMPLES PARA À ESQUERDA:
+
+No* left(No* root)
+{
+	No* aux;
+
+	// essas 3 linhas seguintes executam uma 
+	// rotação simples para direita
+	aux       = root->right;
+	r->right  = aux->left;
+	aux->left = root;
+
+	// essas linhas apenas atribuem as novas alturas dos nós
+	// alterados
+	root->height = max(height(root->right), height(aux->left)) + 1;
+	aux->height  = max(height(aux->right), root->height) + 1;
+
+	return aux;
+}
+
+FUNÇÃO DE ROTAÇÃO DUPLA DireitaEsquerda:
+
+No* leftToRight(No* root)
+{
+	r->left = left(r->left);
+	return right(r);
+}
+
+FUNÇÃO DE ROTAÇÃO DUPLA EsquerdaDireita:
+
+No* leftToRight(No* root)
+{
+	r->right = right(r->right);
+	return left(r);
+}   
+
+FUNÇÃO DE INSERÇÃO:
+
+
