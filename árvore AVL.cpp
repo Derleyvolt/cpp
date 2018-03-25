@@ -51,8 +51,8 @@ Raiz de uma subárvore com FB -2 (ou 2) e um nó filho com FB -1 (ou 1).
       \   / \
        3 6   10
      
- E foi agora pertence a A.
- B agora é o nó raiz.
+ 6 foi agora pertence a 8.
+ 4 agora é o nó raiz.
 
 Quando subárvores do pai e filho pendem para um mesmo lado:
 * Rotação simples para o lado oposto
@@ -194,4 +194,54 @@ No* leftToRight(No* root)
 
 FUNÇÃO DE INSERÇÃO:
 
+No* insert(No* root, int key)
+{
+	if ( root == nullptr )
+		return createNode(key);
 
+	// esse if é destinado as manipulações a esquerda da raiz
+	if ( key < root->key )
+	{
+		root->left = insert(root->left, key);
+
+		if ( height(root->left) - height(root->right) == 2 )
+
+			// se a chave do nó que é pai do nó inserido for maior
+			// que a chave deste nó inserido, significa que uma rotação
+			// à direita precisa ser executada, pois a inserção foi na
+			// parte mais externa
+			if ( key < root->left->key )
+				root = right(root);
+			else
+				// por outro lado, a inserção foi na parte mais interna
+				// significando que uma rotação EsquerdaDireita precisa
+				// ser executada
+				root = leftToRight(root);
+	}
+	else
+		// esse if é destinado a manipulações a direita da raiz
+		if ( key > root->key )
+		{
+			root->right = insert(root->right, key);
+
+			if ( height(root->right) - height(root->left) == 2 )
+			{
+				if ( key > root->right->key )
+					root = left(root);
+			}
+			else
+			{
+				root = rightToLeft(root);
+			}
+		}
+
+	root->height = max(height(root->left), height(root->right)) + 1;
+	return root;
+}
+
+A função de remoção de chaves é mais complexa pois exige mais rotações, então vou deixar ela pro futuro..
+	
+	
+Considerações ->
+	
+	
