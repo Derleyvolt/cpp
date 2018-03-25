@@ -1,7 +1,8 @@
 //   Assunto: Árvore binária de busca
 //      Site: https://www.youtube.com/watch?v=YkF76cOgtMQ&list=PLxI8Can9yAHf8k8LrUePyj0y3lLpigGcl&index=21 & 
 //            https://www.youtube.com/watch?v=NUNe0Mp1MVI&index=22&list=PLxI8Can9yAHf8k8LrUePyj0y3lLpigGcl &
-//            http://wiki.icmc.usp.br/images/f/fa/%C3%81rvores_AVL.pdf
+//            http://wiki.icmc.usp.br/images/f/fa/%C3%81rvores_AVL.pdf &
+//            https://www.geeksforgeeks.org/avl-tree-set-1-insertion/
 //   Opinião: 
 //      Data: 24/03/2018
 //     Autor: Desconhecido
@@ -132,7 +133,7 @@ int height(No *t)
         return max(height(t->left), height(t->right)) + 1;
 }    
 
-para entender a recursividade função eu tive que pegar a imagem deste link 
+para entender a recursividade da função eu tive que pegar a imagem deste link 
 http://www.mathcs.emory.edu/~cheung/Courses/323/Syllabus/Trees/AVL-delete.html passei pro paint e fiquei tentando
 entender, basta pensar que cada nó é uma função height..
 
