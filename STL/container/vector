@@ -1,1 +1,4 @@
 
+- random acess(por index)
+- lento na inserção e remoção no meio do container
+- rápido na inserção e remoção no final do container
