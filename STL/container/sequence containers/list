@@ -2,3 +2,5 @@
 - rápido na inserção ou remoção em qualquer localização
 - rápido acesso em ambas as extremidades
 - lento acesso aleatório
+
+são estruturadas como listas ligadas, ou seja, para acessar o quinto elemento é necessário passar por todos os elementos antes dele.
