@@ -1,0 +1,4 @@
+
+- rápido acesso aleatório(usando index)
+- lento na inserção e remoção no meio do container
+- rápido na inserção e remoção(push e pop) no começo e no final do container
