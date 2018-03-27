@@ -72,8 +72,8 @@ Função hash: é uma estrutura da dados especial, que associa chaves de pesquis
 Colisões: ocorrem quando uma função hash gera um valor que já foi gerado com uma key diferente, ou seja, o valo gerado já está
           sendo ocupado na tabela. Isso é conhecido como colisão.
  
-    Para tratar as colisões, pode-se colocar o elemento na primeira posição livre seguinte e considerar a tabela como circular
-    (o elemente após o último a[n - 1] é o primeiro elemento a[0].
-      - Isso se aplica tanto na inserção de novos elementos quanto na busca. 
-      - Esta técnica é cconhecida como lista linear, linear probing ou sondagem.
+    Existem 2 maneiras principais de se tratar colisões:
+
+    - Separate Chaining
+    - Open Addressing
   
