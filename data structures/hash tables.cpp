@@ -79,21 +79,10 @@ Colisões: ocorrem quando uma função hash gera um valor que já foi gerado com
     
       
       
- Separete Chaining: a ideia é fazer cada slot da tabela de espalhamento apontar para uma lista ligada
-                    de registros.
+  Separete Chaining: a ideia é fazer cada slot da tabela de espalhamento apontar para uma lista ligada
+                     de registros.
   
-     Vantagens: 
-               - Simples de implementar
-               - Hash table nunca é preenchida, nós podemos sempre adicionar mais elemento a corrente
-               - Menos sensiveis a função hash ou load factors
-               - É usado principalmente quando não se sabe quantas e quantas vezes as chaves podem ser inseridas ou excluídas
-           
-     Desvantagens: 
-               - Performance de cache não é bom pois as keys são armazenadas usando listas ligadas. Endereçamento aberto provém
-                 melhor performance de chace pois tudo é armazenado na mesma tabela
-               - Disperdicio de espaço (algumas partes da tabela nunca serão usadas)
-               - Se a corrente torna-se muito grande, o tempo de busca pode ficar O(n) no pior caso
-               - Uso de espaço extra para os links/ponteiros.
+                ...
              
              
   Open addressing: assim como separate chaining, open addressing é um método para manipular colisões. Em open addressing,
@@ -133,6 +122,37 @@ Colisões: ocorrem quando uma função hash gera um valor que já foi gerado com
     
             
   
-     2 - Quadratic probing: nós procuramos
+     2 - Quadratic probing: nós procuramos pelo i² slot.
+       
+      hash(x) é o índice.
+      
+        Se slot hash(x) % S está cheio, então nós tentamos (hash(x) + 1*1) % S
+        Se (hash(x) + 1*1) % S também está cheio, então nós tentamos (hash(x) + 2*2) % S
+        Se (hash(x) + 2*2) % S também está cheio, então nós tentamos (hash(x) + 3*3) % S
 
 
+
+
+
+      Linear probing tem a melhor performance de chace, mas sofre de agrupamentos. A maior vantagem de linear probing é a facilidade
+      de calcular.
+
+      Quadratic probing fica entre os dois termos de performance de cache e o problema de agrupamentos.
+       
+       
+  Open Addressing vs Separate Chaining
+  
+  Vantagens de chaining:
+      1 - é mais simples de implementar
+      2 - a tabela hash nunca é preenchida, nós podemos sempre adicionar mais elementos. em open addressing a tabela pode ficar cheia
+      3 - é menos sensivel ao hash function ou load factors
+      4 - é mais usado quando é desconhecida a quantidade de chaves e o quão frequente elas são inseridas ou deletadas
+      5 - open addressing requer cuidado extra para evitar agrupamentos e load factor
+       
+  Vantagens de open addressing:
+      1 - performance de cache do chaining não é bom pois as chaves são armazenadas usando listas ligadas. Open addressing provém
+          melhor performance de cache pois tudo é armazenado na mesma tabela
+      2 - Disperdicio de espaço(algumas partes da tabela hash de chaining nunca serão usadas). Em open addessing, um slot pode ser usado
+          mesmo se uma entrada não for mapeada para ele
+      3 - chaining usa espaço extra
+        
