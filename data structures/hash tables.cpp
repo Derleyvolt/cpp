@@ -5,6 +5,7 @@ Hash table:
 - Key
 - Colisão
 - Encadeamento
+- Load factor
 
 
 Descrição - 
@@ -14,8 +15,7 @@ Descrição -
 
  
 =================================================================================================================================    
-Função hash: é uma estrutura da dados especial, que associa chaves de pesquisa a valores. Seu objetivo é, a partir de uma chave 
-             simples, fazer uma busca rápida e obter o valor desejado.
+Função hash: é uma função que gera um valor a partir de uma chave.
     
     // uma função hash simples retorna o resto da divisão por 10 com a chave, 10 seria o tamanho do vetor onde 
     // as chaves serão armazenadas
@@ -74,6 +74,65 @@ Colisões: ocorrem quando uma função hash gera um valor que já foi gerado com
  
     Existem 2 maneiras principais de se tratar colisões:
 
-    - Separate Chaining
-    - Open Addressing
+    - Separate chaining
+    - Open addressing
+    
+      
+      
+ Separete Chaining: a ideia é fazer cada slot da tabela de espalhamento apontar para uma lista ligada
+                    de registros.
   
+     Vantagens: 
+               - Simples de implementar
+               - Hash table nunca é preenchida, nós podemos sempre adicionar mais elemento a corrente
+               - Menos sensiveis a função hash ou load factors
+               - É usado principalmente quando não se sabe quantas e quantas vezes as chaves podem ser inseridas ou excluídas
+           
+     Desvantagens: 
+               - Performance de cache não é bom pois as keys são armazenadas usando listas ligadas. Endereçamento aberto provém
+                 melhor performance de chace pois tudo é armazenado na mesma tabela
+               - Disperdicio de espaço (algumas partes da tabela nunca serão usadas)
+               - Se a corrente torna-se muito grande, o tempo de busca pode ficar O(n) no pior caso
+               - Uso de espaço extra para os links/ponteiros.
+             
+             
+  Open addressing: assim como separate chaining, open addressing é um método para manipular colisões. Em open addressing,
+                   todos os elementos são armazenados em uma table hash. Então em qualquer ponto, o tamanho da tabela deve
+                   ser maior ou igual ao número total de chaves/keys.
+                     
+     Insert(k): continue 'sondando' até que um slot vazio seja encontrado. uma vez que um slot vazio seja encontrado, insira k.
+                     
+     Search(k): continue 'sondando' até a chave do slot não se torne igual a chave de busca ou um slot vazio seja encontrado.
+                     
+     Delete(k): se nós simplesmente deletar-mos uma chave, a operação de busca pode falhar. Então slots de chaves deletadas são
+                 marcados como 'deletado'.
+                     
+                a operação de inserção pode inserir um item em um slot deletado, mas a operação de busca não pararia em um slot
+                deletado.
+             
+      
+                     
+     Open addressing é feito das seguintes maneiras:
+
+      
+     1 - Linear probing: em linear probing(sondagem linear), nós linearmente seguimos ao próximo slot. Por exemplo, o intervalo
+         típico entre duas sondas é 1.
+       
+       hash(x) é o índice do slot executado usando a função hash e S é o tamanho da tabela
+       
+           se slot hash(x) % S está cheio, então nós tentamos (hash(x) + 1) % S
+           se (hash(x) + 1) % S também não está cheio, então nós tentamos (hash(x) + 2) % S
+           se (hash(x) + 2) % S também não está cheio, então nós tentamos (hash(x) + 3) % S 
+           ...        
+           ...
+       
+       
+          Clustering: o principal problema com linear probing é o agrupamento/aglomeramento, muitos elementos consecutivos forma
+                      grupos e isso começa a levar tempo para encontrar um slot vazio ou para encontrar/buscar um elemento, isso
+                      é conhecido como agregação primária.
+    
+            
+  
+     2 - Quadratic probing: nós procuramos
+
+
