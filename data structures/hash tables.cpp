@@ -1,10 +1,10 @@
+Dica: 
+
 
 Hash table:
 
 - Hash function
-- Key
 - Colisão
-- Encadeamento
 - Load factor
 
 
@@ -133,8 +133,7 @@ Colisões: ocorrem quando uma função hash gera um valor que já foi gerado com
 
 
 
-
-      Linear probing tem a melhor performance de chace, mas sofre de agrupamentos. A maior vantagem de linear probing é a facilidade
+      Linear probing tem a melhor performance de cache, mas sofre de agrupamentos. A maior vantagem de linear probing é a facilidade
       de calcular.
 
       Quadratic probing fica entre os dois termos de performance de cache e o problema de agrupamentos.
@@ -155,4 +154,25 @@ Colisões: ocorrem quando uma função hash gera um valor que já foi gerado com
       2 - Disperdicio de espaço(algumas partes da tabela hash de chaining nunca serão usadas). Em open addessing, um slot pode ser usado
           mesmo se uma entrada não for mapeada para ele
       3 - chaining usa espaço extra
+      
+      
+=================================================================================================================================
+Load factor: é o número de entradas/elementos no array dividido pelo tamanho do array, isso nos dar a noção de o quão cheio o
+             array está, ou seja, usamos o load factor como base para saber quando nós precisamos realoca/aumentar o espaço do array.
+               
+Se nós temos, por exemplo, um array de tamanho 100, e ele possui 25 elementos, temos então um load factor de 0.25.. Se o load factor é
+0, então o array está vazio, se o load factor é 1/2, então o array está com metade de seu tamanho preenchido por elementos, e se o array
+é 1, então ele está completamente lotado, cheio.
+               
+O load factor está ligado a colisões na nossa tabela, pois um load factor baixo significa uma maior chance de colisões pela tabela..
+               
+O ideial é, quando o load factor alcançar 0.6 ~ 0.7 nós já devemos pensar na ideia de realocar/aumentar o tamanho do array.
+  
+  
+Load factor baixo resulta em mais colisões, load factor alto aumenta a complexidade das funções de busca e remoção, visto 
+que com um load factor alto a tabela terá mais slots vazios.
+               
+              
+               
+               
         
