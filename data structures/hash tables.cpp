@@ -169,8 +169,8 @@ O load factor está ligado a colisões na nossa tabela, pois um load factor baix
 O ideial é, quando o load factor alcançar 0.6 ~ 0.7 nós já devemos pensar na ideia de realocar/aumentar o tamanho do array.
   
   
-Load factor baixo resulta em mais colisões, load factor alto aumenta a complexidade das funções de busca e remoção, visto 
-que com um load factor alto a tabela terá mais slots vazios.
+Load factor alto resulta em mais colisões, load factor baixo aumenta a complexidade das funções de busca e remoção, visto 
+que com um load factor baixo a tabela terá mais slots vazios.
                
               
                
