@@ -1,6 +1,0 @@
-
-- random acess(por index)
-- lento na inserção e remoção no meio do container
-- rápido na inserção e remoção no final do container
-
-os elementos são armazenados sequencialmente na memória, ou seja, permite acesso aleatório legitimo.
