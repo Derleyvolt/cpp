@@ -122,7 +122,6 @@ c[idx]                Returns the element with index idx (no range checking)
 c.at(idx)             Returns the element with index idx (throws range-error exception if idx is out of range)
 c.front()             Returns the first element (no check whether a first element exists)
 c.back()              Returns the last element (no check whether a last element exists)                                                    
-
 ===============================================================================================================================
 
                                                                  
@@ -141,8 +140,7 @@ c.rbegin()                 Returns a reverse iterator for the first element of a
 c.rend()                   Returns a reverse iterator for the position after the last element of a reverse iteration
 c.crbegin()                Returns a constant reverse iterator for the first element of a reverse iteration (since C++11)
 c.crend()                  Returns a constant reverse iterator for the position after the last element of a reverse iteration 
-                           (since C++11)
-                                                                 
+                           (since C++11)                                                              
 ===============================================================================================================================                                                         
 
                                                                  
@@ -195,7 +193,5 @@ c.erase(beg, end)                          Removes all elements of the range [be
 c.resize(num)                              Changes the number of elements to num (if size() grows new elements are created by their 
                                            default constructor)
 c.resize(num, elem)                        Changes the number of elements to num (if size() grows new elements are copies of elem)
-c.clear()                                  Removes all elements (empties the container)    
-                                                                 
-                                                              
-                                                                              
+c.clear()                                  Removes all elements (empties the container) 
+===============================================================================================================================                                                                    
