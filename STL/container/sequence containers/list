@@ -5,3 +5,31 @@
 
 
 É uma lista bi-dimensional que permite inserção e remoção rápida de elementos em qualquer posição. Elementos na lista não são continuos.
+
+Um list gerencia seus elementos como um doubly linked list.
+
+========================================== HABILIDADE DAS LISTAS ======================================================================
+
+A estrutura interna de uma lista é totalmente diferente de um array, vector, ou de um deque. Um objeto list provém dois ponteiros,
+os chamados ancoras, no qual referem-se ao primeiro e último elemento. Cada elemento tem ponteiro para o elemento antecessor e su-
+cessor. Para inserir um novo elemento, você apenas manipula os ponteiros correspondentes.
+
+Portanto, listas diferem de várias maneiras de vectors, deques e arrays:
+
+• Uma lista não provém random access. Por exemplo, para acessa o quinto elemento, você deve navega os primeiros quatro elementos,
+  seguindo a corrente de ligações. Portanto, acessando um elemento arbitrário usando listas é lento. Embora, você pode navegar por
+  uma lista de ambas as extremidades. Então o acesso ao primeiro e último elemento é rápido.
+
+• Inserir e remover elementos é rápido em toda posição ()
+
+• Inserting and removing elements is fast at each position (provided you are there), and not only at
+one or both ends. You can always insert and delete an element in constant time, because no other
+elements have to be moved. Internally, only some pointer values are manipulated.
+• Inserting and deleting elements does not invalidate pointers, references, and iterators to other
+elements.
+• A list supports exception handling in such a way that almost every operation succeeds or is a
+no-op. Thus, you can’t get into an intermediate state in which only half of the operation is
+complete
+
+
+
