@@ -57,7 +57,6 @@ list<Elem> c(beg,end)                     Creates a list initialized with the el
 list<Elem> c(initlist)                    Creates a list initialized with the elements of initializer list initlist (since C++11)
 list<Elem> c = initlist                   Creates a list initialized with the elements of initializer list initlist (since C++11)
 c.~list()                                 Destroys all elements and frees the memory
-
 ===============================================================================================================================
 
 ========================================= OPERAÇÕES NÃO MODIFICADORAS =========================================================
@@ -76,10 +75,9 @@ c1 < c2                                   Returns whether c1 is less than c2
 c1 > c2                                   Returns whether c1 is greater than c2 (equivalent to c2<c1)
 c1 <= c2                                  Returns whether c1 is less than or equal to c2 (equivalent to !(c2<c1))
 c1 >= c2                                  Returns whether c1 is greater than or equal to c2 (equivalent to !(c1<c2))
-
 ===============================================================================================================================
 
-========================================= ATRIBUIÇÃO =========================================================
+========================================= ATRIBUIÇÃO ==========================================================================
 
 Listas também provém usuais operações de atribuição para containers sequenciais. Como sempre, as operações de inserção
 se assemelham com os construtores para prover diferentes fontes para inicialização.
@@ -95,3 +93,117 @@ c.assign(beg,end)                       Assigns the elements of the range [beg,e
 c.assign(initlist)                      Assigns all the elements of the initializer list initlist
 c1.swap(c2)                             Swaps the data of c1 and c2
 swap(c1,c2)                             Swaps the data of c1 and c2
+===============================================================================================================================
+
+========================================= ACESSO AOS ELEMENTOS ================================================================
+   
+Para acessar todos os elementos da lista, você deve usar range-based for loops, operações especificas ou iterators. Porque listas
+não possuem random acess/acesso aleatório, listas provém apenas front() e back() para acessar os elementos diretamente.
+                                                                                                                                                                                                                          
+Operação                               Efeitos
+
+c.front()                              Returns the first element (no check whether a first element exists)
+c.back()                               Returns the last element (no check whether a last element exists)
+===============================================================================================================================                                                                           
+
+                                                                                                                                                      
+Como sempre, essas operações não checam se o container está vazio. Se o container estiver vazio, chamar essas operações resultará
+em 'undefined behavior'. Portanto, o chamador deve garantir que o container contém pelo menos um elemento. Por exemplo:
+                                                                                                                                                                                                                               
+std::list<Elem> coll;      // vazio!
+std::cout << coll.front(); // RUNTIME ERROR ⇒ undefined behavior
+                                                                           
+if (!coll.empty()) 
+{
+    std::cout << coll.back(); // OK
+}
+
+Note que este código está OK apenas em ambientes single-thread. Em contextos multithread, você precisa que os mecanismos de sincroni-
+zação garantam que coll não seja modificado entre a checagem de seu tamanho e o acesso ao elemento.                                                                                                                                                       
+                                                                           
+
+========================================= ACESSO AOS ELEMENTOS ================================================================
+                                                                           
+Para acessar todos os elemento de uma lista, você deve usar iterators. Listas fornecem as funções usuais dos iterators. Embora,
+pelo fato da lista não possuir random acess, esses iterators são apenas bidirecionais. Portanto, você não pode chamar algoritmos
+que requerem random-acess iterators. Todos os algoritmos que manipulam a ordem de muitos elementos, especialmente algortimos de 
+'sort', são desta categoria. Embora, para ordenar/sorting os elementos, listas fornecem a função membro especial sort().
+                                                                           
+Operação                                 Efeitos
+
+c.begin()                                Returns a bidirectional iterator for the first element
+c.end()                                  Returns a bidirectional iterator for the position after the last element
+c.cbegin()                               Returns a constant bidirectional iterator for the first element (since C++11)
+c.cend()                                 Returns a constant bidirectional iterator for the position after the last element (since C++11)
+c.rbegin()                               Returns a reverse iterator for the first element of a reverse iteration
+c.rend()                                 Returns a reverse iterator for the position after the last element of a reverse iteration
+c.crbegin()                              Returns a constant reverse iterator for the first element of a reverse iteration (since C++11)
+c.crend()                                Returns a constant reverse iterator f
+===============================================================================================================================
+
+========================================= INSERÇÃO E REMOÇÃO DE ELEMENTOS =====================================================
+
+Listas fornecem todas as funções do deque, complementando com implementações especiais dos algoritmos remove() e remove_if().                                                                          
+Como de costume quando usando STL, você deve garantir que os argumentos são válidos. Iterators devem se referir a posições
+válidas, e o início do range deve ter a posição que não esteja depois do final do range. Inserção e remoção são mais rapidas se,
+quando trabalhando com multiplos elementos, você use uma única chamada para todos os elementos ao invés de multiplas chamadas.                                                                          
+Para remover elementos, listas provém implementações especiais do algoritmo remove(). Essas funções membros são mais rapidas 
+doque o algoritmo remove() porque elas manipulam apenas os ponteiros internos ao invés dos elementos. a contrário dos vectors
+ou deques, você deve chamar a função membro remove() ao invés do algoritmo remove(). Para remover todos os elementos que tem 
+um certo valor, você pode fazer o seguinte:
+                                                                           
+std::list<Elem> coll;
+...
+// remover todos os elementos com o valor val
+coll.remove(val);
+                                                                           
+Embora, para remover apenas a primeira ocorrência de um valor, você deve usar um algoritmo, como find(), para encontrar
+a primeira ocorrência do valor e depois o deletar. Você pode usar remove_if() para definir o critério para remoção dos
+elementos por uma função ou uma função object. remove_if() remove todo elemento para qual a função passada retorna true.
+Um exemplo do uso de remove_if() é uma declaração para remover todos os elementos que tem um valor par:                                                                           
+                                                                           
+
+You can use remove_if() to define the criterion for the removal of the elements by a function
+or a function object. remove_if() removes each element for which calling the passed operation
+yields true. An example of the use of remove_if() is a statement to remove all elements that have
+an even value:
+                                                                           
+// remover todos os elementos que são par
+coll.remove_if ([] (int i) 
+{
+    return i % 2 == 0;
+});                                                                           
+
+Aqui, um lambda é usado para descobrir quais elementos remover. o valor de cada elemento da lista é passado para função lambda,
+se o elemento passado for par, ele será removido, assim, ao final de todos os elementos, todos os elementos par serão removidos.
+As seguintes operações não invalidam iterators e referências para outros membros: insert(), emplace(), emplace...(), push_front(),
+push_back, pop_front() e erase().                                                                           
+                                                                                                                                                                                                                                      
+Operação                             Efeito
+
+c.push_back(elem)                    Appends a copy of elem at the end
+c.pop_back()                         Removes the last element (does not return it)
+c.push_front(elem)                   Inserts a copy of elem at the beginning
+c.pop_front()                        Removes the first element (does not return it)
+c.insert(pos,elem)                   Inserts a copy of elem before iterator position pos and returns the position of the new element
+c.insert(pos,n,elem)                 Inserts n copies of elem before iterator position pos and  returns the position of the first new
+                                     element (or pos if there is no new element)
+c.insert(pos,beg,end)                Inserts a copy of all elements of the range [beg,end) before iterator position pos and returns the
+                                     position of the first new element (or pos if there is no new element)
+c.insert(pos,initlist)               Inserts a copy of all elements of the initializer list initlist before iterator position pos and 
+                                     returns the position of the first new element (or pos if there is no new element; since C++11)
+c.emplace(pos,args...)               Inserts a copy of an element initialized with args before iterator position pos and returns the 
+                                     position of the new element (since C++11)
+c.emplace_back(args...)              Appends a copy of an element initialized with args at the end (returns nothing; since C++11)
+c.emplace_front(args...)             Inserts a copy of an element initialized with args at the beginning (returns nothing; since C++11)
+c.erase(pos)                         Removes the element at iterator position pos and returns the position of the next element
+c.erase(beg,end)                     Removes all elements of the range [beg,end) and returns the position of the next element
+c.remove(val)                        Removes all elements with value val
+c.remove_if(op)                      Removes all elements for which op(elem) yields true
+c.resize(num)                        Changes the number of elements to num (if size() grows new elements are created by their default 
+                                     constructor)
+c.resize(num,elem)                   Changes the number of elements to num (if size() grows new elements are copies of elem)
+c.clear()                            Removes all elements (empties the container)                                                                          
+===============================================================================================================================       
+                                                                                                                               
+                                                                        
