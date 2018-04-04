@@ -28,4 +28,4 @@ Observações:
 é importante notar que o termo "sequencial" pode se referir a armazenamento ou acesso. Por exemplo:
 
 std::vector é um container com armazenamento sequencial e com acesso aleatório, enquanto std::list é um container
-de armazenamento sequencial e acesso sequencial.
+de armazenamento sequencial e acesso sequencial. 
