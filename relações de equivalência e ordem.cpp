@@ -8,7 +8,7 @@ Irreflexiva se x R x é false para todos os x
 
 Simétrico se quando x R y for true, então y R x também deve ser
   
-Anti-simétrico se quando x R y é true então y R x é false
+Anti-simétrico se quando x R y é true e y R x também é true, então x = y
 
 Transitivo se quando x R y e y R z for true, então x R z também deve ser
 
@@ -42,4 +42,3 @@ Transitivity of incomparability: If a and b are incomparable, and so are b and c
   
   
 https://en.wikipedia.org/wiki/Weak_ordering
-
