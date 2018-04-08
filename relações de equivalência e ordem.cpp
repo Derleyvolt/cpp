@@ -38,7 +38,8 @@ Incomparability: Neither f(a, b) nor f(b, a) is true
 Transitivity of incomparability: If a and b are incomparable, and so are b and c, then a and c are incomparable.
   
   
-  
+  explicação sobre strict wear order -> 
+  https://stackoverflow.com/questions/18781405/partialordering-strictweakordering-totalordering-whats-the-main-difference-i
   
   
 https://en.wikipedia.org/wiki/Weak_ordering
