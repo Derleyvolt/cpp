@@ -36,4 +36,10 @@ Anti-symmetry: If f(a, b) and f(b, a) are both true iff a ≡ b
 Transitivity: If f(a, b) and f(b, c) are true, then f(a, c) is true
 Incomparability: Neither f(a, b) nor f(b, a) is true
 Transitivity of incomparability: If a and b are incomparable, and so are b and c, then a and c are incomparable.
+  
+  
+  
+  
+  
+https://en.wikipedia.org/wiki/Weak_ordering
 
