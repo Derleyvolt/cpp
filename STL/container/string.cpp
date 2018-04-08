@@ -24,3 +24,4 @@
   
 
   
+http://en.cppreference.com/w/cpp/string/basic_string/operator_cmp
