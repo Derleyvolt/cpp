@@ -26,12 +26,14 @@ Uma relação binária é considerada uma relação de equivalência se ela for:
 2 - simétrica
 3 - transitiva
 
-Dados retirados desse site -> https://www.eecis.udel.edu/~saunders/courses/320/10s/order-relation.html
+Dados retirados desse site -> http://sidd-reddy.blogspot.com.br/2011/01/i-was-going-over-c-stl-when-i-noticed.html
 
-Properties of relations: Let R(T, T) be a relation on T. 
-R is reflexive if for all a in T, R(a,a) is true. 
-R is anti-reflexive if for all a in T, R(a,a) is false. 
-R is symmetric if for all a,b in T, if whenever R(a,b) is true, then R(b,a) is also true. 
-R is anti-symmetric if for all a,b in T, if whenever R(a,b) is true, then R(b,a) is false. 
-R is transitive if for all a,b,c in T, if when R(a,b) and R(b,c) are true, then R(a,c) is also true. 
+Given a function f (which models a binary relation) over a domain D, and a, b ∈ D:
+
+Reflexivity: f (a, a) is true.
+Asymmetry: For a ≠ b, if f(a, b) is true, f(b,a) is false
+Anti-symmetry: If f(a, b) and f(b, a) are both true iff a ≡ b
+Transitivity: If f(a, b) and f(b, c) are true, then f(a, c) is true
+Incomparability: Neither f(a, b) nor f(b, a) is true
+Transitivity of incomparability: If a and b are incomparable, and so are b and c, then a and c are incomparable.
 
