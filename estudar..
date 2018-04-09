@@ -1,53 +1,17 @@
-
-
-
-class Engine
-{
-public:
-	Engine(int x, int y) : x(x), y(y)
-	{
-		//std::cout << "constructor was called" << std::endl;
-	}
-
-	Engine(const Engine& rhs)
-	{
-		std::cout << "copy constructor was called" << std::endl;
-		this->x = rhs.x;
-		this->y = rhs.y;
-	}
-
-	Engine(Engine&& rhs)
-	{
-		std::cout << "move" << std::endl;
-
-		this->x = rhs.x;
-		this->y = rhs.y;
-	}
-
-	Engine& operator=(const Engine& rhs)
-	{
-		//std::cout << "copy assignment constructor was called" << std::endl;
-
-		this->x = rhs.x;
-		this->y = rhs.y;
-		return *this;
-	}
-
-	int x;
-	int y;
-};
-
 template<class T>
 void func(T&& eng)
 {
 
 }
 
+int main()
+{
+	Engine engine(10, 20);
+	std::make_pair(std::move(engine), 10);  // chama o move constructor
+	func(std::move(engine));                // não chama o move constructor, poque?
+}
 
-Engine engine(10, 20);
 
-std::make_pair(std::move(engine), 10);  // chama o move constructor
 
-func(std::move(engine));                // não chama o move constructor
 
 
