@@ -7,7 +7,7 @@ Os elementos são comparados usando operator< na primeira versão, e comp na seg
 
 Elementos equivalentes não são garantidos manter sua original ordem relativa.
 
-
+a ordem por padrão é ascendente para valores númericos e lexicografica ascendente para valores strings.
 
 paramêtros:
 
@@ -29,5 +29,14 @@ comp:
   A função pode ser um ponteiro para função ou uma função objeto.
   
   
-  
+  int main()
+  {
+      std::vector<Engine> vec = { Engine(10, 20), Engine(100, 200), Engine(1000, 2000) };   
+      
+      std::sort(vec.begin(), vec.end(), [](const Engine& rhs, const Engine& lhs) 
+      { 
+          return rhs.x < lhs.x;  
+      });
+  }
+    
   Complexidade: O(n * log(n))
