@@ -47,3 +47,6 @@ assinaturas são diferentes, onde funçoes objetos tem tipos diferentes mesmo qu
   
 Funções objetos são geralmente mais rapidas do que funções comuns. O conceito de template permite melhor otimização pois mais detalhes
 são definidos em tempo de compilação.
+  
+  
+http://www.bogotobogo.com/cplusplus/functors.php
