@@ -1,8 +1,82 @@
-
-- armazena apenas objetos chaves
-- permite apenas uma chave de cada valor
-
 É implementado como uma árvore binária de busca.
 
 
+set e multiset organizam seus elementos automaticamente de acordo com um certo "sorting criterion"/ critério de organização.
+A diferença entre os dois tipos de containers é que multisets permitem elementos duplicads, e o set não.
 
+template <typename T,
+          typename Compare = less<T>,
+          typename Allocator = allocator<T>>
+class set;
+
+template <typename T,
+          typename Compare = less<T>,
+          typename Allocator = allocator<T>>
+class multiset;
+
+Os elementos de um set ou multiset pode ter qualquer tipo T que é comparavél de acordo com o "sorting criterion". O segundo template
+adicional define o "sorting criterion". Se um "sorting criterion" especial não é passado, o padrão "criterion less" é usado.
+A função objeto "less" organiza os elementos comparando-os com o operador<.
+
+O "sorting criterion" deve definir um "strict weak ordering".
+
+note que isto significa que você tem que distinguir entre menor e igual. Um critério tal como o operador <= não preencheria este
+requerimento.
+
+Baseado nessas propriedades (que eu não coloquei aqui), o "sorting criterion" também é usado para checar equivalência. isto é, dois
+elementos são considerados duplicados se nenhum é menor do que o outro.
+
+Para multisets, a ordem dos elementos equivalentes é aleatória, mas estável. Portanto, inserções e 
+
+For multisets, the order of equivalent elements is random but stable. Thus, insertions and deletações preservam a ordem relativa de 
+elementos equivalentes.
+
+HABILIDADES DE SETS E MULTISETS:
+
+Como todo container associativo padronizado, sets e multisets são geralmente implementados como árvores binárias balanceadas.
+
+A maior vantagem de organização automatica é que uma árvore binária executa bem quando elementos com um certo valor são buscados.
+De fato, buscas tem complexidade logaritmica.
+
+Embora, organização automatica também impõe uma importante restrição em sets e multisets: Você pode não mudar o valor de um elemento
+diretamente, porque isso pode comprometer a ordem correta.
+
+De fato, sets e multisets são tipicamentes implementados como red-black trees, que são bons tanto para mudar o número de elementos e 
+busca de elementos. Eles garantem no máximo dois relinks internos em inserções e que o caminho mais longo é no máximo duas vezes maior
+que o caminho mais curto até uma folha.
+
+Portanto, para modificar o valor de um elemento, você deve remover o elemento tendo o valor antigo e inserir um novo elemento com um
+novo valor. As interfaces refletem esse comportamento:
+
+• Sets e multisets não fornecem operações para acessar o elemento diretamente.
+• acesso indireto via iterators tem a limitação que, do ponto de vista de iterators, o valor do elemento é constate.
+
+================================= OPERAÇÕES SET E MULTISET =========================================================
+
+Você pode definir um "sorting criterion" de duas maneiras:
+
+1. Como um parâmetro template. Por exemplo:
+
+std::set<int, std::greater<int>> coll;
+
+Neste caso, o "sorting criterion" é parte do tipo. Portanto, o sistema de tipos garante que apenas containers com o mesmo "sorting
+criterion" possam ser combinados (ou seja, um set<int, std::greater<int>> não pode ser atribuido a um set<int, std::less<int>>. Isto
+é uma maneira usual para especificar o "sorting criterion". Para ser mais preciso, o segundo parâmetro é o tipo do "sorting criterion".
+Um "sorting criterion" concreto é a função objeto que é criada com o container. Para fazer isso, o construtor do container chama o 
+construtor padrão do "sorting criterion".
+
+2. Como um parâmetro do constructor. Neste caso, você pode ter um tipo para vários "sorting criterion" que permite ter diferentes
+valores iniciais ou estados. Isto é útil quando processando o "sorting criterion" em tempo de execução e quando o "sorting criterion"
+
+
+
+2. As a constructor parameter. In this case, you might have a type for several sorting criteria
+that allows having different initial values or states. This is useful when processing the sorting
+criterion at runtime and when sorting criteria are needed that are different but of the same data
+type. See Section 7.7.5, page 328, for a complete example.
+If no special sorting criterion is passed, the default sorting criterion, function object less<>, is used,
+which sorts the elements by using operator <.
+Note that the sorting criterion is also used to check for equivalence of two elements in the same
+container (i.e., to find duplicates). Thus, when the default sorting criterion is used, the check for
+equivalence of two elements looks like this:
+if (! (elem1<elem2 || elem2<elem1))
