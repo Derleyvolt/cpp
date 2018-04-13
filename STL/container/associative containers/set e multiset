@@ -21,32 +21,21 @@ A função objeto "less" organiza os elementos comparando-os com o operador<.
 O "sorting criterion" deve definir um "strict weak ordering".
 
 note que isto significa que você tem que distinguir entre menor e igual. Um critério tal como o operador <= não preencheria este
-requerimento.
-
-Baseado nessas propriedades (que eu não coloquei aqui), o "sorting criterion" também é usado para checar equivalência. isto é, dois
-elementos são considerados duplicados se nenhum é menor do que o outro.
-
-Para multisets, a ordem dos elementos equivalentes é aleatória, mas estável. Portanto, inserções e 
-
-For multisets, the order of equivalent elements is random but stable. Thus, insertions and deletações preservam a ordem relativa de 
-elementos equivalentes.
+requerimento. Baseado nessas propriedades (que eu não coloquei aqui), o "sorting criterion" também é usado para checar equivalência.
+isto é, dois elementos são considerados duplicados se nenhum é menor do que o outro. Para multisets, a ordem dos elementos equivalentes
+é aleatória, mas estável. Portanto, inserções e deletações preservam a ordem rela- tiva de elementos equivalentes.
 
 HABILIDADES DE SETS E MULTISETS:
 
 Como todo container associativo padronizado, sets e multisets são geralmente implementados como árvores binárias balanceadas.
-
 A maior vantagem de organização automatica é que uma árvore binária executa bem quando elementos com um certo valor são buscados.
-De fato, buscas tem complexidade logaritmica.
-
-Embora, organização automatica também impõe uma importante restrição em sets e multisets: Você pode não mudar o valor de um elemento
-diretamente, porque isso pode comprometer a ordem correta.
+De fato, buscas tem complexidade logaritmica. Embora, organização automatica também impõe uma importante restrição em sets e multisets:
+Você pode não mudar o valor de um elemento diretamente, porque isso pode comprometer a ordem correta.
 
 De fato, sets e multisets são tipicamentes implementados como red-black trees, que são bons tanto para mudar o número de elementos e 
 busca de elementos. Eles garantem no máximo dois relinks internos em inserções e que o caminho mais longo é no máximo duas vezes maior
-que o caminho mais curto até uma folha.
-
-Portanto, para modificar o valor de um elemento, você deve remover o elemento tendo o valor antigo e inserir um novo elemento com um
-novo valor. As interfaces refletem esse comportamento:
+que o caminho mais curto até uma folha. Portanto, para modificar o valor de um elemento, você deve remover o elemento tendo o valor 
+antigo e inserir um novo elemento com um novo valor. As interfaces refletem esse comportamento:
 
 • Sets e multisets não fornecem operações para acessar o elemento diretamente.
 • acesso indireto via iterators tem a limitação que, do ponto de vista de iterators, o valor do elemento é constate.
