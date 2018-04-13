@@ -66,17 +66,60 @@ Um "sorting criterion" concreto é a função objeto que é criada com o contain
 construtor padrão do "sorting criterion".
 
 2. Como um parâmetro do constructor. Neste caso, você pode ter um tipo para vários "sorting criterion" que permite ter diferentes
-valores iniciais ou estados. Isto é útil quando processando o "sorting criterion" em tempo de execução e quando o "sorting criterion"
+valores iniciais ou estados. Isto é útil quando processando o "sorting criterion" em tempo de execução e quando são necessários
+"sorting criterion" diferentes mas dos mesmos dados. Se nenhum "sorting criterion" especial é usado, o padrão "sorting criterion",
+função objeto less<>, é usado, o qual organiza os elementos usando o operador<.  Note que o "sorting criterion" também é usado para
+checar equivalência de dois elementos no mesmo container (exemplo, para encontrar duplicatas). Portanto, quando o padrão "sorting
+criterion" é usado, a checagem por equivalência de dois elementos parece com isso:
 
-
-
-2. As a constructor parameter. In this case, you might have a type for several sorting criteria
-that allows having different initial values or states. This is useful when processing the sorting
-criterion at runtime and when sorting criteria are needed that are different but of the same data
-type. See Section 7.7.5, page 328, for a complete example.
-If no special sorting criterion is passed, the default sorting criterion, function object less<>, is used,
-which sorts the elements by using operator <.
-Note that the sorting criterion is also used to check for equivalence of two elements in the same
-container (i.e., to find duplicates). Thus, when the default sorting criterion is used, the check for
-equivalence of two elements looks like this:
 if (! (elem1<elem2 || elem2<elem1))
+
+Isto tem três vantagens:
+1. Você precisa passa apenas um argumento como "sorting criterion".
+2. Você não precisa fornecer o operador == para o tipo de elemento.
+3. Você pode ter definições contrarias entre equivalência e igualdade (embora, isto pode uma fonte de confusão).
+
+Checando por equivalência desta meneira leva um pouco mais de tempo porque duas comparações podem ser necessárias para avaliar
+a expressão anterior. Note, embora, que se o resultado da primeira comparação retorna true, a segunda comparação não é avaliada.
+
+Note também que se dois containers são comparados pelo operador ==, os elementos em ambos os containers são comparados usando seus
+operadores ==, no qual significa que o operador == tem de ser fornecido pelo tipo elemento.
+
+O construtor para um início e o fim de um range poderia ser usado para inicializar o container com elementos de um container que
+possui outro tipo, ou arrays, ou de um "standard input".
+
+Initializando um container com os elementos de um outro container:
+
+std::list<int> l; // l é um linked list de inteiros
+...
+
+// copia todos os elementos da lista como float em um vector
+std::vector<float> c(l.begin(),l.end());
+
+Operação                         Efeito
+
+set c                            Default constructor; creates an empty set/multiset without any elements
+set c(op)                        Creates an empty set/multiset that uses op as the sorting criterion
+set c(c2)                        Copy constructor; creates a copy of another set/multiset of the same type (all elements are copied)
+set c = c2                       Copy constructor; creates a copy of another set/multiset of the same type (all elements are copied)
+set c(rv)                        Move constructor; creates a new set/multiset of the same type, taking the contents of the rvalue rv
+set c = rv                       Move constructor; creates a new set/multiset of the same type, taking the contents of the rvalue rv
+set c(beg,end)                   Creates a set/multiset initialized by the elements of the range [beg,end)
+set c(beg,end,op)                Creates a set/multiset with the sorting criterion op initialized by the elements of the range [beg,end)
+set c(initlist)                  Creates a set/multiset initialized with the elements of initializer list initlist
+set c = initlist                 Creates a set/multiset initialized with the elements of initializer list initlist (since C++11)
+c.~set()                         Destroys all elements and frees the memory
+
+
+Aqui, set pode ser um dos seguintes tipos:
+
+set                              Efeito
+
+set<Elem> A                      set that by default sorts with less<> (operator <)
+set<Elem,Op> A                   set that by default sorts with Op
+multiset<Elem> A                 multiset that by default sorts with less<> (operator <)
+multiset<Elem,Op> A              multiset that by default sorts with Op
+
+
+
+
