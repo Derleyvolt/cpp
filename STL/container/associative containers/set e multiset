@@ -40,7 +40,7 @@ antigo e inserir um novo elemento com um novo valor. As interfaces refletem esse
 • Sets e multisets não fornecem operações para acessar o elemento diretamente.
 • acesso indireto via iterators tem a limitação que, do ponto de vista de iterators, o valor do elemento é constate.
 
-================================= OPERAÇÕES SET E MULTISET =========================================================
+================================= OPERAÇÕES SET E MULTISET =======================================================================
 
 Você pode definir um "sorting criterion" de duas maneiras:
 
@@ -72,7 +72,9 @@ Checando por equivalência desta meneira leva um pouco mais de tempo porque duas
 a expressão anterior. Note, embora, que se o resultado da primeira comparação retorna true, a segunda comparação não é avaliada.
 
 Note também que se dois containers são comparados pelo operador ==, os elementos em ambos os containers são comparados usando seus
-operadores ==, no qual significa que o operador == tem de ser fornecido pelo tipo elemento.
+operadores ==, no qual significa que o operador == tem de ser fornecido pelo tipo elemento, o operador == possui uma versão sobreca-
+rregada para cada container, no caso do set, primeiro é verificado o tamanho dos 2 containers, se ambos tiverem o mesmo tamanho, então
+uma comparação lexográfica é realizada nos elementos de ambos os containers.
 
 O construtor para um início e o fim de um range poderia ser usado para inicializar o container com elementos de um container que
 possui outro tipo, ou arrays, ou de um "standard input".
@@ -109,6 +111,44 @@ set<Elem,Op> A                   set that by default sorts with Op
 multiset<Elem> A                 multiset that by default sorts with less<> (operator <)
 multiset<Elem,Op> A              multiset that by default sorts with Op
 
+================================= OPERAÇÕES NÃO MODIFICADORAS ========================================================================
+
+Sets and multisets fornecem as habituais operações não modificadoras para consultar o tamanho e fazer comparações
+
+Operação                         Efeito
+
+c.key_comp()                     Returns the comparison criterion
+c.value_comp()                   Returns the comparison criterion for values as a whole (same as key_comp())
+c.empty()                        Returns whether the container is empty (equivalent to size() == 0 but might be faster)
+c.size()                         Returns the current number of elements
+c.max_size()                     Returns the maximum number of elements possible
+c1 == c2                         Returns whether c1 is equal to c2 (calls == for the elements)
+c1 != c2                         Returns whether c1 is not equal to c2 (equivalent to !(c1==c2))
+c1 < c2                          Returns whether c1 is less than c2
+c1 > c2                          Returns whether c1 is greater than c2 (equivalent to c2<c1)
+c1 <= c2                         Returns whether c1 is less than or equal to c2 (equivalent to !(c2<c1))
+c1 >= c2                         Returns whether c1 is greater than or equal to c2 (equivalent to !(c1<c2))
 
 
+
+Comparisons are provided only for containers of the same type. Thus, the elements and the
+sorting criterion must have the same types; otherwise, a type error occurs at compile time. For
+example:
+std::set<float> c1; // sorting criterion: std::less<>
+std::set<float,std::greater<float> > c2;
+...
+if (c1 == c2) { // ERROR: different types
+...
+}
+The check whether a container is less than another container is done by a lexicographical comparison
+(see Section 11.5.4, page 548). To compare containers of different types (different sorting criteria),
+you must use the comparing algorithms in Section 11.5.4, page 542.
+
+
+Alimentos | Preço
+--------- | ------
+Arroz     | R$ 10
+Feijão    | R$ 8
+Batata    | R$ 7
+Macarrão  | R$ 8
 
