@@ -346,7 +346,9 @@ std::pair<std::set<float>::iterator, bool>
 Observe que os tipos de retorno das funções de inserção com um parâmetro de posição adicional não são diferentes.
 Essas funções retornam um único iterator para ambos, set e multiset. Embora, essas funções possuem o mesmo efeito que funções
 sem o parâmetro de posição. Elas diferem apenas em suas performances. Você pode passa a posição de um iterator, mas esta posição
-é processada como uma dica para otimiza a performance. De fato, 
+é processada como uma dica para otimiza a performance. De fato, se o elemento é inserido logo após a posição que é passada como
+primeiro argumento, o tempo de complexidade muda de logaritmico para constante. O fato que o tipo de retorno para funções de inserção
+com a dica da posição adicional não tem a mesma diferença que as funções de inserção sem a dica da posição
 
 Note that the return types of the insert functions with an additional position parameter don’t differ.
 These functions return a single iterator for both sets and multisets. However, these functions have the
