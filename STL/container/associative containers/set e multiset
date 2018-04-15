@@ -111,7 +111,7 @@ set<Elem,Op> A                   set that by default sorts with Op
 multiset<Elem> A                 multiset that by default sorts with less<> (operator <)
 multiset<Elem,Op> A              multiset that by default sorts with Op
 
-================================= OPERAÇÕES NÃO MODIFICADORAS ========================================================================
+================================================= OPERAÇÕES NÃO MODIFICADORAS ==========================================================
 
 Sets and multisets fornecem as habituais operações não modificadoras para consultar o tamanho e fazer comparações
 
@@ -129,26 +129,131 @@ c1 > c2                          Returns whether c1 is greater than c2 (equivale
 c1 <= c2                         Returns whether c1 is less than or equal to c2 (equivalent to !(c2<c1))
 c1 >= c2                         Returns whether c1 is greater than or equal to c2 (equivalent to !(c1<c2))
 
+Comparações são fornecidas apenas para containers do mesmo tipo. Portanto, os elementos e o "sorting criterion" devem ter os mesmos
+tipos, por outro lado, o compilador irá mostrar um erro em tempo de compilação. Por exemplo:
 
-
-Comparisons are provided only for containers of the same type. Thus, the elements and the
-sorting criterion must have the same types; otherwise, a type error occurs at compile time. For
-example:
 std::set<float> c1; // sorting criterion: std::less<>
-std::set<float,std::greater<float> > c2;
+std::set<float, std::greater<float> > c2;
 ...
-if (c1 == c2) { // ERROR: different types
+if (c1 == c2) { // ERROR: tipos diferentes
 ...
 }
-The check whether a container is less than another container is done by a lexicographical comparison
-(see Section 11.5.4, page 548). To compare containers of different types (different sorting criteria),
-you must use the comparing algorithms in Section 11.5.4, page 542.
+
+A checagem se o container é menor do que um outro container é feito por comparação lexográfica. Para comparar container de tipos 
+diferentes (sorting criteria difrentes), você deve usa algoritmos de comparação.
 
 
-Alimentos | Preço
---------- | ------
-Arroz     | R$ 10
-Feijão    | R$ 8
-Batata    | R$ 7
-Macarrão  | R$ 8
+=================================================== OPERAÇÕES NÃO MODIFICADORAS ========================================================
 
+Pelo fato deles serem otimizados para busca rápida de elementos, sets e multisets fornecem funções de busca especiais. Essas funções
+são versões especiais de algoritmos gerais que possuem o mesmo nome. Você deve sempre preferir versões otimizadas para sets e multisets
+para alcançar complexidade logartica ao invés de complexidade linear de algortimos gerais. Por exemplo, a busca de uma coleção de 1000
+elementos requer em média apenas 10 comparações ao invés de 500.
+
+
+Operação                           Efeito
+
+c.count(val)                       Returns the number of elements with value val
+c.find(val)                        Returns the position of the first element with value val (or end() if none found)
+c.lower_bound(val)                 Returns the first position, where val would get inserted (the first element >= val)
+c.upper_bound(val)                 Returns the last position, where val would get inserted (the first element > val)
+c.equal_range(val)                 Returns a range with all elements with a value equal to val (i.e., the first and last position,
+                                   where val would get inserted)
+                                   
+                                   
+A função membro find() procura o primeiro elemento que tem o valor que foi passado como argumento e retorna um iterator da posição.
+Se tal elemento não for encontrado, fid() retorna end() do container.
+lower_bound() e upper_bound() return a primeira e última posição, respectivamente, no qual um elemento com o valor passado seria
+inserido. Em outras palavras, lower_bound() retorna a posição do primeiro elemento que tem o mesmo ou maior valor que o argumento,
+enquanto que upper_bound retorna a posição do primeiro elemento com um valor maior. equal_range() retorna ambos os retornos de
+lower_bound() e upper_bound() como um pair. Portanto, equal_range() retorna um range de elementos que tem o mesmo valor que o 
+argumento. Se lower_bound() ou o primeiro valor de equal_range() é igual ao upper_bound() ou o segundo valor de equal_range(),
+não existem elementos com o mesmo valor no set ou multiset. Naturalmente, o range de elementos tendo o mesmo valor poderiam conter
+no máximo on elemento no set.
+
+
+
+O seguinte exemplo mostra como usar lower_bound(), upper_bound(), e equal_range():
+
+#include <iostream>
+#include <set>
+using namespace std;
+
+int main ()
+{
+    set<int> c;
+    c.insert(1);
+    c.insert(2);
+    c.insert(4);
+    c.insert(5);
+    c.insert(6);
+    cout << "lower_bound(3): " << *c.lower_bound(3) << endl;
+    cout << "upper_bound(3): " << *c.upper_bound(3) << endl;
+    cout << "equal_range(3): " << *c.equal_range(3).first << " " << *c.equal_range(3).second << endl;
+    cout << endl;
+    cout << "lower_bound(5): " << *c.lower_bound(5) << endl;
+    cout << "upper_bound(5): " << *c.upper_bound(5) << endl;
+    cout << "equal_range(5): " << *c.equal_range(5).first << " " << *c.equal_range(5).second << endl;
+}
+
+O output do programa é o seguinte:
+
+lower_bound(3): 4
+upper_bound(3): 4
+equal_range(3): 4 4
+lower_bound(5): 5
+upper_bound(5): 6
+equal_range(5): 5 6
+
+Se você usar um multiset ao invés de um set, o programa tem o mesmo output.
+
+========================================================== ATRIBUIÇÃO =================================================================
+
+Sets e multisets fornecem apenas as operações de atribuição fundamentais que todos os containers fornecem. Para essas operações, ambos
+containers devem ter o mesmo tipo. Em particular, o tipo do critério de comparação deve ser o mesmo, embora o próprios critério de 
+comparação possam ser diferentes.
+
+Operação                       Efeito
+
+c = c2                         Assigns all elements of c2 to c
+c = rv                         Move assigns all elements of the rvalue rv to c (since C++11)
+c = initlist                   Assigns all elements of the initializer list initlist to c (since C++11)
+c1.swap(c2)                    Swaps the data of c1 and c2
+swap(c1, c2)                   Swaps the data of c1 and c2
+
+========================================================== FUNÇÕES DE ITERATOR =========================================================
+
+Sets e multisets não fornecem acesso direto ao elemento, então você tem que usar um range-based for loop ou iterators. Sets e multisets
+fornecem as usuais funções membros para iterators.
+
+Operação                Efeito
+
+c.begin()               Returns a bidirectional iterator for the first element
+c.end()                 Returns a bidirectional iterator for the position after the last element
+c.cbegin()              Returns a constant bidirectional iterator for the first element (since C++11)
+c.cend()                Returns a constant bidirectional iterator for the position after the last element (since C++11)
+c.rbegin()              Returns a reverse iterator for the first element of a reverse iteration
+c.rend()                Returns a reverse iterator for the position after the last element of a reverse iteration
+c.crbegin()             Returns a constant reverse iterator for the first element of a reverse iteration (since C++11)
+c.crend()               Returns a constant reverse iterator for the position after the last element of a reverse iteration (since C++11)
+
+
+Como com todas as classes de contêineres associativos, os iterators são iterators bidimensional. Portanto, você não pode usa-los em
+algoritmos que são fornecidos apenas para iterators de acesso aleatório/random-acess iterators, tal como algoritmos para sorting ou
+embaralhamento aleatório/random shuffling.
+Mais importante é a limitação que, do ponto de vista do interator, todos os elementos são considerados constantes. Isto é necessário
+para assegurar que você não possa comprometer a ordem dos elementos mudando seus valores. Embora, como um resultado, você não pode
+chamar qualquer algoritmo modificador nos elements de um set ou multiset. Por exemplo, você não pode chamar o algoritmo remove(),
+
+
+
+As with all associative container classes, the iterators are bidirectional iterators(see Section 9.2.4,
+page 437). Thus, you can’t use them in algorithms that are provided only for random-access iterators,
+such as algorithms for sorting or random shuffling.
+More important is the constraint that, from an iterator’s point of view, all elements are considered
+constant. This is necessary to ensure that you can’t compromise the order of the elements by
+changing their values. However, as a result, you can’t call any modifying algorithm on the elements
+of a set or a multiset. For example, you can’t call the remove() algorithm, because it “removes”
+by overwriting “removed” elements with the following elements (see Section 6.7.2, page 221, for
+a detailed discussion of this problem). To remove elements in sets and multisets, you can use only
+member functions provided by the container.
