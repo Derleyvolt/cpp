@@ -244,16 +244,124 @@ embaralhamento aleatório/random shuffling.
 Mais importante é a limitação que, do ponto de vista do interator, todos os elementos são considerados constantes. Isto é necessário
 para assegurar que você não possa comprometer a ordem dos elementos mudando seus valores. Embora, como um resultado, você não pode
 chamar qualquer algoritmo modificador nos elements de um set ou multiset. Por exemplo, você não pode chamar o algoritmo remove(),
+porque ele "remove" sobrescrevendo o elemento "removido" com os seguintes elementos. Para remover elementos em sets e multisets, você
+pode apenas usar funções membros fornecidas pelo container.
+
+================================================== INSERIR E REMOVER ELEMENTOS =========================================================
+
+Operação                                      Efeito
+ 
+c.insert(val)                                 Inserts a copy of val and returns the position of the new element and, for sets, whether 
+                                              it succeeded
+c.insert(pos,val)                             Inserts a copy of val and returns the position of the new element (pos is used as a hint
+                                              pointing to where the insert should start the search)
+c.insert(beg,end)                             Inserts a copy of all elements of the range [beg,end) (returns nothing)
+c.insert(initlist)                            Inserts a copy of all elements in the initializer list initlist (returns nothing; 
+                                              since C++11)
+c.emplace(args...)                            Inserts a copy of an element initialized with args and returns the position of the new
+                                              element and, for sets, whether it succeeded (since C++11)
+c.emplace_hint(pos,args...)                   Inserts a copy of an element initialized with args and returns the position of the new
+                                              element (pos is used as a hint pointing to where the insert should start the search)
+c.erase(val)                                  Removes all elements equal to val and returns the number of removed elements
+c.erase(pos)                                  Removes the element at iterator position pos and returns the following position 
+                                              (returned nothing before C++11)
+c.erase(beg,end)                              Removes all elements of the range [beg,end) and returns the following position 
+                                              (returned nothing before C++11)
+c.clear()                                     Removes all elements (empties the container)
+
+Como sempre quando usando STL, você deve garantir que os argumentos são válidos. Iterators devem se referir a posições válidas, e o
+início de um range deve ter uma posição que não esteja após o fim do container. Inserir e remover é mais rápido se, quando trabalhando
+com multiplos elementos, você use uma única chamada para todos os elementos ao invés de multiplas chamadas.
+Para multisets, desde C++11 é garantido que insert(), emplace(), e erase() preservam a ordem relativa de elementos equivalentes, e que
+inserção de elementos são colocados no final de valores equivalentes existentes. Note que os tipos de retorno das funções de inserção
+insert() e emplace() diferem como o seguinte:
+Note that the return types of the inserting functions insert() and emplace() differ as follows:
+
+Sets fornece a seguinte interface:
+pair<iterator,bool>           insert (const value_type& val);
+           iterator           insert (const_iterator posHint,
+                                      const value_type& val);
+template <typename... Args>
+pair<iterator, bool>          emplace (Args&&... args);
+template <typename... Args>
+iterator                      emplace_hint (const_iterator posHint,
+                                            Args&&... args);
+                                            
+                                            
+• Multisets fornecem a seguinte interface:
+iterator                      insert (const value_type& val);
+iterator                      insert (const_iterator posHint,
+                                      const value_type& val);
+template <typename... Args>
+iterator                      emplace (Args&&... args);
+template <typename... Args>
+iterator                      emplace_hint (const_iterator posHint,
+                              Args&&... args);
+                 
+A diferença nos tipos de retrno resulta porque multisets permitem duplicatas, enquanto que sets não. Portanto, a inserção de um elemento
+pode falir para um set se já existe um elemento com o mesmo valor. Portanto, um set retorna dois valores usando uma estrutura pair.
+
+1. O segundo membro da estrutura pair retorna se a inserção foi bem sucedida.
+2. O primeiro membro da estrutura pair retorna a posição do novo elemento inserido ou a posição de um elemento existente.
+
+Em todos os outros casos, as funções retornam a posição do novo elemento ou de um elemento existente se o set já contém um elemento
+com o mesmo valor.
+Os seguintes exemplos mostram como usar esta interface para inserir um elemento em um set. Isto tenta inserir um elemento com valor
+3.3 em um set:
+
+std::set<double> c;
+...
+if ( c.insert(3.3).second ) 
+{
+    std::cout << "3.3 inserted" << std::endl;
+}
+else {
+    std::cout << "3.3 already exists" << std::endl;
+}                           
+ 
+se você quiser processar a nova e velha posição:
+
+// insere o valor e processa o retorno
+auto status = c.insert(value);
+if ( status.second ) 
+{
+    std::cout << value << " inserted as element "
+}
+else {
+    std::cout << value << " already exists as element "
+}
+
+std::cout << std::distance(c.begin(),status.first) + 1 << std::endl;
+
+O output das 2 chamadas desta sequência pode as seguintes:
+
+8.9 inserted as element 4
+7.7 already exists as element 3
+
+Neste exemplo, o tipo do status é o seguinte:
+
+std::pair<std::set<float>::iterator, bool>
 
 
+Observe que os tipos de retorno das funções de inserção com um parâmetro de posição adicional não são diferentes.
+Essas funções retornam um único iterator para ambos, set e multiset. Embora, essas funções possuem o mesmo efeito que funções
+sem o parâmetro de posição. Elas diferem apenas em suas performances. Você pode passa a posição de um iterator, mas esta posição
+é processada como uma dica para otimiza a performance. De fato, 
 
-As with all associative container classes, the iterators are bidirectional iterators(see Section 9.2.4,
-page 437). Thus, you can’t use them in algorithms that are provided only for random-access iterators,
-such as algorithms for sorting or random shuffling.
-More important is the constraint that, from an iterator’s point of view, all elements are considered
-constant. This is necessary to ensure that you can’t compromise the order of the elements by
-changing their values. However, as a result, you can’t call any modifying algorithm on the elements
-of a set or a multiset. For example, you can’t call the remove() algorithm, because it “removes”
-by overwriting “removed” elements with the following elements (see Section 6.7.2, page 221, for
-a detailed discussion of this problem). To remove elements in sets and multisets, you can use only
-member functions provided by the container.
+Note that the return types of the insert functions with an additional position parameter don’t differ.
+These functions return a single iterator for both sets and multisets. However, these functions have the
+same effect as the functions without the position parameter. They differ only in their performance.
+You can pass an iterator position, but this position is processed as a hint to optimize performance. In
+fact, if the element gets inserted right after the position that is passed as the first argument, the time
+complexity changes from logarithmic to amortized constant (complexity is discussed in Section 2.2,
+page 10). The fact that the return type for the insert functions with the additional position hint
+doesn’t have the same difference as the insert functions without the position hint ensures that you
+have one insert function that has the same interface for all container types. In fact, this interface is
+used by general inserters. See Section 9.4.2, especially page 458, for details about inserters.
+To remove an element that has a certain value, you simply call erase():
+std::set<Elem> coll;
+...
+// remove all elements with passed value
+coll.erase(value);
+
+
