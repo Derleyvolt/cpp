@@ -1,3 +1,25 @@
+Resumo:
+
+• Sets e multisets possuem um cretério de organização/sorting criterion
+
+• Sets e multisets não permite acesso direto aos elementos
+
+• Sets e multisets podem ser comparados, pois existem sobrecargas dos operadores de comparação pra eles, todos os operadores de 
+  comparação executam uma comparação lexicográfica exeto os operadores == e != 
+  http://en.cppreference.com/w/cpp/container/multiset/operator_cmp & http://en.cppreference.com/w/cpp/container/set/operator_cmp
+  
+• Sets e multisets pelo fato deles serem otimizados para busca rápida de elementos, eles fornecem funções de busca especiais.
+  Essas funções são versões especiais de algoritmos gerais que possuem o mesmo nome. Você deve sempre preferir versões otimizadas
+  para sets e multisets para alcançar complexidade logartica ao invés de complexidade linear de algortimos gerais
+
+• Sets e multisets possuem iterators bidimensional, portanto, não se deve usá-los em algoritmos que utilizem random-access iterators.
+
+• Sets e multisets não permitem alterar o valor de um elemento, isso assegura que você não comprometer a ordem dos elementos mudando
+  seus valores.
+  
+• Sets e multisets possuem algumas funções com retornos diferentes pelo fato de um permitir duplicatas e o outro não.
+
+
 É implementado como uma árvore binária de busca.
 
 
@@ -104,7 +126,7 @@ c.~set()                         Destroys all elements and frees the memory
 
 Aqui, set pode ser um dos seguintes tipos:
 
-set                              Efeito
+Set                              Efeito
 
 set<Elem> A                      set that by default sorts with less<> (operator <)
 set<Elem,Op> A                   set that by default sorts with Op
@@ -143,7 +165,7 @@ A checagem se o container é menor do que um outro container é feito por compar
 diferentes (sorting criteria difrentes), você deve usa algoritmos de comparação.
 
 
-=================================================== OPERAÇÕES NÃO MODIFICADORAS ========================================================
+=================================================== OPERAÇÕES ESPECIAIS DE BUSCA =======================================================
 
 Pelo fato deles serem otimizados para busca rápida de elementos, sets e multisets fornecem funções de busca especiais. Essas funções
 são versões especiais de algoritmos gerais que possuem o mesmo nome. Você deve sempre preferir versões otimizadas para sets e multisets
@@ -239,7 +261,7 @@ c.crend()               Returns a constant reverse iterator for the position aft
 
 
 Como com todas as classes de contêineres associativos, os iterators são iterators bidimensional. Portanto, você não pode usa-los em
-algoritmos que são fornecidos apenas para iterators de acesso aleatório/random-acess iterators, tal como algoritmos para sorting ou
+algoritmos que são fornecidos apenas para iterators de acesso aleatório/random-access iterators, tal como algoritmos para sorting ou
 embaralhamento aleatório/random shuffling.
 Mais importante é a limitação que, do ponto de vista do interator, todos os elementos são considerados constantes. Isto é necessário
 para assegurar que você não possa comprometer a ordem dos elementos mudando seus valores. Embora, como um resultado, você não pode
@@ -274,8 +296,7 @@ início de um range deve ter uma posição que não esteja após o fim do contai
 com multiplos elementos, você use uma única chamada para todos os elementos ao invés de multiplas chamadas.
 Para multisets, desde C++11 é garantido que insert(), emplace(), e erase() preservam a ordem relativa de elementos equivalentes, e que
 inserção de elementos são colocados no final de valores equivalentes existentes. Note que os tipos de retorno das funções de inserção
-insert() e emplace() diferem como o seguinte:
-Note that the return types of the inserting functions insert() and emplace() differ as follows:
+insert() e emplace() diferem no seguinte:
 
 Sets fornece a seguinte interface:
 pair<iterator,bool>           insert (const value_type& val);
@@ -335,35 +356,46 @@ std::cout << std::distance(c.begin(),status.first) + 1 << std::endl;
 
 O output das 2 chamadas desta sequência pode as seguintes:
 
-8.9 inserted as element 4
-7.7 already exists as element 3
+        8.9 inserted as element 4
+        7.7 already exists as element 3
 
 Neste exemplo, o tipo do status é o seguinte:
 
 std::pair<std::set<float>::iterator, bool>
 
-
 Observe que os tipos de retorno das funções de inserção com um parâmetro de posição adicional não são diferentes.
 Essas funções retornam um único iterator para ambos, set e multiset. Embora, essas funções possuem o mesmo efeito que funções
 sem o parâmetro de posição. Elas diferem apenas em suas performances. Você pode passa a posição de um iterator, mas esta posição
 é processada como uma dica para otimiza a performance. De fato, se o elemento é inserido logo após a posição que é passada como
-primeiro argumento, o tempo de complexidade muda de logaritmico para constante. O fato que o tipo de retorno para funções de inserção
-com a dica da posição adicional não tem a mesma diferença que as funções de inserção sem a dica da posição
+primeiro argumento, o tempo de complexidade muda de logaritmico para constante. O fato de que o tipo de retorno para funções de in-
+serção com a posição adicional como argumento não ter a mesma diferença que as funções de inserção sem a posição como
+argumento garante que você tem uma função de inserção que tem a mesma interface para todos os tipos de containers. De fato, esta
+interface é usada por 'inserters' gerais. Para remover um elemento que tem um certo valor, você simplesmente chama erase():
 
-Note that the return types of the insert functions with an additional position parameter don’t differ.
-These functions return a single iterator for both sets and multisets. However, these functions have the
-same effect as the functions without the position parameter. They differ only in their performance.
-You can pass an iterator position, but this position is processed as a hint to optimize performance. In
-fact, if the element gets inserted right after the position that is passed as the first argument, the time
-complexity changes from logarithmic to amortized constant (complexity is discussed in Section 2.2,
-page 10). The fact that the return type for the insert functions with the additional position hint
-doesn’t have the same difference as the insert functions without the position hint ensures that you
-have one insert function that has the same interface for all container types. In fact, this interface is
-used by general inserters. See Section 9.4.2, especially page 458, for details about inserters.
-To remove an element that has a certain value, you simply call erase():
 std::set<Elem> coll;
 ...
-// remove all elements with passed value
+// remove todos os elementos com o valor passado
 coll.erase(value);
 
+Perceba que essa função membro tem um nome diferente de remove() fornecida por lists. erase se comporta diferentemente na medida em que
+retorna o número de elementos removidos. Quando chamado por sets, ela retorna apenas 0 ou 1, pois não existem elementos equivalentes em
+sets. Se um multiset contém duplicatas, você não pode usar erase() para remover apenas o primeiro elemento dessas duplicatas. Ao invés,
+você pode usar o seguinte:
+
+std::multiset<Elem>::iterator pos;
+
+pos = coll.find(value);
+if (pos != coll.end()) 
+{
+    coll.erase(pos);
+}
+
+pelo fato de ser mais rápido, você deve usar a função membro find() ao invés do algoritmo find().
+Perceba que antes C++11, as funções erase() de containers associativos não retornavam nada (tinha tipo de retorno void). A razão era
+performance. Pode custar tempo para encontrar e retornar o sucessor em um container associativo, pois o container é implementado como
+uma árvore binária. Portanto, este é um muito complicado código onde você apaga elementos enquanto itera sobre eles.
+Oberve também que para sets que usam iteratos como elementos, chamar erase() pode ser 'ambiguous'. Por esta razão, C++11 fornece
+sobrecargas para ambos erase(iterator) e erase(const_iterator). Para multisets, todas as operações insert(), emplace(), e erase()
+preservam a ordem relativa dos elementos equivalentes. Desde C++11, chamar insert(val) ou emplace(args...) garante que o novo elemento
+é inserido no final do range dos elementos equivalentes.
 
