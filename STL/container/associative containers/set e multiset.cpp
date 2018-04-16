@@ -1,5 +1,7 @@
 Resumo:
 
+• Sets e multisets são implementados como red-black trees
+
 • Sets e multisets possuem um cretério de organização/sorting criterion
 
 • Sets e multisets não permite acesso direto aos elementos
@@ -19,10 +21,8 @@ Resumo:
   
 • Sets e multisets possuem algumas funções com retornos diferentes pelo fato de um permitir duplicatas e o outro não.
 
-
-É implementado como uma árvore binária de busca.
-
-
+********************************************************* INÍCIO **********************************************************************  
+  
 set e multiset organizam seus elementos automaticamente de acordo com um certo "sorting criterion"/ critério de organização.
 A diferença entre os dois tipos de containers é que multisets permitem elementos duplicads, e o set não.
 
