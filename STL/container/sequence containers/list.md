@@ -216,3 +216,37 @@ c.insert(pos,n,elem)              |   Inserts n copies of elem before iterator p
 c.insert(pos,beg,end)             |   Inserts a copy of all elements of the range (beg,end) before iterator position pos and returns the
                                       position of the first new element (or pos if there is no new element)
 rato                              |    10                                                        
+
+
+
+
+Alimentos | Preço
+--------- | ------
+Arroz     | R$ 10
+Feijão    | R$ 8
+Batata    | R$ 7
+Macarrão  | R$ 8
+Arroz     | R$ 10
+Feijão    | R$ 8
+Batata    | R$ 7
+Macarrão  | R$ 8
+Arroz     | R$ 10
+Feijão    | R$ 8
+Batata    | R$ 7
+Macarrão  | R$ 8
+Arroz     | R$ 10
+Feijão    | R$ 8
+Batata    | R$ 7
+Macarrão  | R$ 8
+Arroz     | R$ 10
+Feijão    | R$ 8
+Batata    | R$ 7
+Macarrão  | R$ 8
+Arroz     | R$ 10
+Feijão    | R$ 8
+Batata    | R$ 7
+Macarrão  | R$ 8
+Arroz     | R$ 10
+Feijão    | R$ 8
+Batata    | R$ 7
+Macarrão  | R$ 8
