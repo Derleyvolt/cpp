@@ -16,12 +16,12 @@ cessor. Para inserir um novo elemento, você apenas manipula os ponteiros corres
 
 Portanto, listas diferem de várias maneiras de vectors, deques e arrays:
 
- Uma lista não provém random access. Por exemplo, para acessa o quinto elemento, você deve navega os primeiros quatro elementos,
- seguindo a corrente de ligações. Portanto, acessando um elemento arbitrário usando listas é lento. Embora, você pode navegar por
- uma lista de ambas as extremidades. Então o acesso ao primeiro e último elemento é rápido.
+Uma lista não provém random access. Por exemplo, para acessa o quinto elemento, você deve navega os primeiros quatro elementos,
+seguindo a corrente de ligações. Portanto, acessando um elemento arbitrário usando listas é lento. Embora, você pode navegar por
+uma lista de ambas as extremidades. Então o acesso ao primeiro e último elemento é rápido.
 
- Inserir e remover elementos é rápido em toda posição, diferente de vectors e deques, internamente apenas alguns ponteiros são
- manipulados.
+Inserir e remover elementos é rápido em toda posição, diferente de vectors e deques, internamente apenas alguns ponteiros são
+manipulados.
 
 Inserção e remoção de elements não inválida ponteiros, referências e iterators a outros elementos.
 
