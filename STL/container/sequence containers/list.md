@@ -205,8 +205,8 @@ c.clear()                            Removes all elements (empties the container
                                                                         
                                                                         
 
-Operação                             Efeito
-
+Operação                             | Efeito
+-------------------------------------|-------------
 c.push_back(elem)                    | Appends a copy of elem at the end
 c.pop_back()                         | Removes the last element (does not return it)
 c.push_front(elem)                   | Inserts a copy of elem at the beginning
