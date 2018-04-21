@@ -16,31 +16,31 @@ cessor. Para inserir um novo elemento, você apenas manipula os ponteiros corres
 
 Portanto, listas diferem de várias maneiras de vectors, deques e arrays:
 
-• Uma lista não provém random access. Por exemplo, para acessa o quinto elemento, você deve navega os primeiros quatro elementos,
-  seguindo a corrente de ligações. Portanto, acessando um elemento arbitrário usando listas é lento. Embora, você pode navegar por
-  uma lista de ambas as extremidades. Então o acesso ao primeiro e último elemento é rápido.
+ Uma lista não provém random access. Por exemplo, para acessa o quinto elemento, você deve navega os primeiros quatro elementos,
+ seguindo a corrente de ligações. Portanto, acessando um elemento arbitrário usando listas é lento. Embora, você pode navegar por
+ uma lista de ambas as extremidades. Então o acesso ao primeiro e último elemento é rápido.
 
-• Inserir e remover elementos é rápido em toda posição, diferente de vectors e deques, internamente apenas alguns ponteiros são
-  manipulados.
+ Inserir e remover elementos é rápido em toda posição, diferente de vectors e deques, internamente apenas alguns ponteiros são
+ manipulados.
 
-• Inserção e remoção de elements não inválida ponteiros, referências e iterators a outros elementos.
+Inserção e remoção de elements não inválida ponteiros, referências e iterators a outros elementos.
 
-• Uma lista suporta 'exception handling' de tal maneira que quase todas as operações são bem-sucedidas ou são no-op.
-  Embora, você não pode estar em um estado intermediário no qual apenas metade da operação está completa.
+Uma lista suporta 'exception handling' de tal maneira que quase todas as operações são bem-sucedidas ou são no-op.
+Embora, você não pode estar em um estado intermediário no qual apenas metade da operação está completa.
 
 As funções membros providas pela list refletem essas diferenças de arrys, vectors e deques:
 
-• Listas provém front(), push_front(), e pop_front(), também back(), push_back(),
-  e pop_back().
+Listas provém front(), push_front(), e pop_front(), também back(), push_back(),
+e pop_back().
 
-• Listas não possuem nem um operator subscript nem at(), porque acesso aleatório/random acess não é possível.
+Listas não possuem nem um operator subscript nem at(), porque acesso aleatório/random acess não é possível.
 
-• Listas não provém operações para capacidade ou realocação, pois isso não é necessário. Cada elemento tem sua própria
-  memória que permanece válida até o elemento ser deletado.
+Listas não provém operações para capacidade ou realocação, pois isso não é necessário. Cada elemento tem sua própria
+memória que permanece válida até o elemento ser deletado.
   
-• Listas provém várias funções membros especiais para mover e remover elementos. Essas funções membros são versões mais
-  rapidas doque algoritmos gerais que possuem o mesmo nome. Elas são mais rapidas porque elas apenas redirecionam ponteiros
-  ao invés de copiar e mover valores.
+Listas provém várias funções membros especiais para mover e remover elementos. Essas funções membros são versões mais
+rapidas doque algoritmos gerais que possuem o mesmo nome. Elas são mais rapidas porque elas apenas redirecionam ponteiros
+ao invés de copiar e mover valores.
 
 ## Construtores e destrutores da lista
 
@@ -58,7 +58,7 @@ list<Elem> c(initlist)                    Creates a list initialized with the el
 list<Elem> c = initlist                   Creates a list initialized with the elements of initializer list initlist (since C++11)
 c.~list()                                 Destroys all elements and frees the memory
 
-## OPERAÇÕES NÃO MODIFICADORAS
+## Operações não modificadoras
 
 Listas provém as operações usuais para size e comparações.
 
@@ -75,7 +75,7 @@ c1 > c2                                   Returns whether c1 is greater than c2 
 c1 <= c2                                  Returns whether c1 is less than or equal to c2 (equivalent to !(c2<c1))
 c1 >= c2                                  Returns whether c1 is greater than or equal to c2 (equivalent to !(c1<c2))
 
-## ATRIBUIÇÃO
+## Atribuição
 
 Listas também provém usuais operações de atribuição para containers sequenciais. Como sempre, as operações de inserção
 se assemelham com os construtores para prover diferentes fontes para inicialização.
@@ -93,7 +93,7 @@ c1.swap(c2)                             Swaps the data of c1 and c2
 swap(c1,c2)                             Swaps the data of c1 and c2
 
 
-## ACESSO AOS ELEMENTOS 
+## Acesso aos elementos
    
 Para acessar todos os elementos da lista, você deve usar range-based for loops, operações especificas ou iterators. Porque listas
 não possuem random acess/acesso aleatório, listas provém apenas front() e back() para acessar os elementos diretamente.
@@ -116,7 +116,7 @@ if (!coll.empty())
 }
 
 Note que este código está OK apenas em ambientes single-thread. Em contextos multithread, você precisa que os mecanismos de sincroni-
-zação garantam que coll não seja modificado entre a checagem de seu tamanho e o acesso ao elemento.                                                                                                                                                       
+zação garantam que coll não seja modificado entre a checagem de seu tamanho e o acesso ao elemento.
                                                                            
 
 ## Acesso aos elementos
