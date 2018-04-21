@@ -234,7 +234,8 @@ c.clear()                            | Removes all elements (empties the contain
 
 Alimentos | Preço
 --------- | ------
-Arroz     | R$ 10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxxxx
+Arroz     | R$ 10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxx
+            xx10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxxxx10xxxxxxxxxxxxxxxxxx
 Feijão    | R$ 8
 Batata    | R$ 7
 Macarrão  | R$ 8
