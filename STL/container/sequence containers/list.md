@@ -222,6 +222,8 @@ c.insert(pos,elem)                |   Inserts a copy of elem before iterator pos
 c.insert(pos,n,elem)              |   Inserts n copies of elem before iterator position pos and  returns the position of the first new                                         element (or pos if there is no new element)
 c.insert(pos,beg,end)             |   Inserts a copy of all elements of the range (beg,end) before iterator position pos and returns the
                                       position of the first new element (or pos if there is no new element)
+rato                              |    10                                      
+                                      
 c.insert(pos,initlist)            |   Inserts a copy of all elements of the initializer list initlist before iterator position pos and 
                                       returns the position of the first new element (or pos if there is no new element; since C++11)
 c.emplace(pos,args...)            |   Inserts a copy of an element initialized with args before iterator position pos and returns the 
