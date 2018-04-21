@@ -201,3 +201,12 @@ c.resize(num)                        Changes the number of elements to num (if s
 c.resize(num,elem)                   Changes the number of elements to num (if size() grows new elements are copies of elem)
 c.clear()                            Removes all elements (empties the container)                                                       
                                                                         
+                                                                        
+                                                                        
+                                                                        
+Alimentos | Preço
+--------- | ------
+Arroz     | R$ 10
+Feijão    | R$ 8
+Batata    | R$ 7
+Macarrão  | R$ 8                                                                  
