@@ -57,9 +57,8 @@ list<Elem> c(beg,end)                     Creates a list initialized with the el
 list<Elem> c(initlist)                    Creates a list initialized with the elements of initializer list initlist (since C++11)
 list<Elem> c = initlist                   Creates a list initialized with the elements of initializer list initlist (since C++11)
 c.~list()                                 Destroys all elements and frees the memory
-===============================================================================================================================
 
-========================================= OPERAÇÕES NÃO MODIFICADORAS =========================================================
+## OPERAÇÕES NÃO MODIFICADORAS
 
 Listas provém as operações usuais para size e comparações.
 
@@ -75,9 +74,8 @@ c1 < c2                                   Returns whether c1 is less than c2
 c1 > c2                                   Returns whether c1 is greater than c2 (equivalent to c2<c1)
 c1 <= c2                                  Returns whether c1 is less than or equal to c2 (equivalent to !(c2<c1))
 c1 >= c2                                  Returns whether c1 is greater than or equal to c2 (equivalent to !(c1<c2))
-===============================================================================================================================
 
-========================================= ATRIBUIÇÃO ==========================================================================
+## ATRIBUIÇÃO
 
 Listas também provém usuais operações de atribuição para containers sequenciais. Como sempre, as operações de inserção
 se assemelham com os construtores para prover diferentes fontes para inicialização.
@@ -93,9 +91,9 @@ c.assign(beg,end)                       Assigns the elements of the range [beg,e
 c.assign(initlist)                      Assigns all the elements of the initializer list initlist
 c1.swap(c2)                             Swaps the data of c1 and c2
 swap(c1,c2)                             Swaps the data of c1 and c2
-===============================================================================================================================
 
-========================================= ACESSO AOS ELEMENTOS ================================================================
+
+## ACESSO AOS ELEMENTOS 
    
 Para acessar todos os elementos da lista, você deve usar range-based for loops, operações especificas ou iterators. Porque listas
 não possuem random acess/acesso aleatório, listas provém apenas front() e back() para acessar os elementos diretamente.
@@ -103,8 +101,7 @@ não possuem random acess/acesso aleatório, listas provém apenas front() e bac
 Operação                               Efeitos
 
 c.front()                              Returns the first element (no check whether a first element exists)
-c.back()                               Returns the last element (no check whether a last element exists)
-===============================================================================================================================                                                                           
+c.back()                               Returns the last element (no check whether a last element exists)                                                                           
 
                                                                                                                                                       
 Como sempre, essas operações não checam se o container está vazio. Se o container estiver vazio, chamar essas operações resultará
@@ -139,7 +136,6 @@ c.rbegin()                               Returns a reverse iterator for the firs
 c.rend()                                 Returns a reverse iterator for the position after the last element of a reverse iteration
 c.crbegin()                              Returns a constant reverse iterator for the first element of a reverse iteration (since C++11)
 c.crend()                                Returns a constant reverse iterator f
-===============================================================================================================================
 
 ## Inserção e remoção de elementos
 
@@ -203,7 +199,6 @@ c.remove_if(op)                      Removes all elements for which op(elem) yie
 c.resize(num)                        Changes the number of elements to num (if size() grows new elements are created by their default 
                                      constructor)
 c.resize(num,elem)                   Changes the number of elements to num (if size() grows new elements are copies of elem)
-c.clear()                            Removes all elements (empties the container)                                                                          
-===============================================================================================================================       
+c.clear()                            Removes all elements (empties the container)                                                                                 
                                                                                                                                
                                                                         
