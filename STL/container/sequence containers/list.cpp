@@ -8,7 +8,7 @@
 
 Um list gerencia seus elementos como um doubly linked list.
 
-========================================== HABILIDADE DAS LISTAS ======================================================================
+## Habilidade das listas
 
 A estrutura interna de uma lista é totalmente diferente de um array, vector, ou de um deque. Um objeto list provém dois ponteiros,
 os chamados ancoras, no qual referem-se ao primeiro e último elemento. Cada elemento tem ponteiro para o elemento antecessor e su-
@@ -42,7 +42,7 @@ As funções membros providas pela list refletem essas diferenças de arrys, vec
   rapidas doque algoritmos gerais que possuem o mesmo nome. Elas são mais rapidas porque elas apenas redirecionam ponteiros
   ao invés de copiar e mover valores.
 
-================================= CONSTRUTORES E DESTRUTORES DA LIST =========================================================
+## Construtores e destrutores da lista
 
 Operação                                  Efeito
 
@@ -122,7 +122,7 @@ Note que este código está OK apenas em ambientes single-thread. Em contextos m
 zação garantam que coll não seja modificado entre a checagem de seu tamanho e o acesso ao elemento.                                                                                                                                                       
                                                                            
 
-========================================= ACESSO AOS ELEMENTOS ================================================================
+## Acesso aos elementos
                                                                            
 Para acessar todos os elemento de uma lista, você deve usar iterators. Listas fornecem as funções usuais dos iterators. Embora,
 pelo fato da lista não possuir random acess, esses iterators são apenas bidirecionais. Portanto, você não pode chamar algoritmos
@@ -141,7 +141,7 @@ c.crbegin()                              Returns a constant reverse iterator for
 c.crend()                                Returns a constant reverse iterator f
 ===============================================================================================================================
 
-========================================= INSERÇÃO E REMOÇÃO DE ELEMENTOS =====================================================
+## Inserção e remoção de elementos
 
 Listas fornecem todas as funções do deque, complementando com implementações especiais dos algoritmos remove() e remove_if().                                                                          
 Como de costume quando usando STL, você deve garantir que os argumentos são válidos. Iterators devem se referir a posições
