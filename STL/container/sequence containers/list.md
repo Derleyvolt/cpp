@@ -220,7 +220,7 @@ c.push_front(elem)                |   Inserts a copy of elem at the beginning
 c.pop_front()                     |   Removes the first element (does not return it)
 c.insert(pos,elem)                |   Inserts a copy of elem before iterator position pos and returns the position of the new element
 c.insert(pos,n,elem)              |   Inserts n copies of elem before iterator position pos and  returns the position of the first new                                     |   element (or pos if there is no new element)
-c.insert(pos,beg,end)             |   Inserts a copy of all elements of the range (beg,end) before iterator position pos and returns the
+c.insert(pos,beg,end)             |   Inserts a copy of all elements of the range  before iterator position pos and returns the
                                       position of the first new element (or pos if there is no new element)
 c.insert(pos,initlist)            |   Inserts a copy of all elements of the initializer list initlist before iterator position pos and 
                                       returns the position of the first new element (or pos if there is no new element; since C++11)
