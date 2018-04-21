@@ -199,6 +199,5 @@ c.remove_if(op)                      Removes all elements for which op(elem) yie
 c.resize(num)                        Changes the number of elements to num (if size() grows new elements are created by their default 
                                      constructor)
 c.resize(num,elem)                   Changes the number of elements to num (if size() grows new elements are copies of elem)
-c.clear()                            Removes all elements (empties the container)                                                                                 
-                                                                                                                               
+c.clear()                            Removes all elements (empties the container)                                                       
                                                                         
