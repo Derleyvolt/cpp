@@ -215,18 +215,7 @@ c.insert(pos,elem)                |   Inserts a copy of elem before iterator pos
 c.insert(pos,n,elem)              |   Inserts n copies of elem before iterator position pos and  returns the position of the first new                                         element (or pos if there is no new element)
 c.insert(pos,beg,end)             |   Inserts a copy of all elements of the range (beg,end) before iterator position pos and returns the
                                       position of the first new element (or pos if there is no new element)
-rato                              |    10                                      
-                                      
+rato                              |    10                                                                         
 c.insert(pos,initlist)            |   Inserts a copy of all elements of the initializer list initlist before iterator position pos and 
                                       returns the position of the first new element (or pos if there is no new element; since C++11)
-c.emplace(pos,args...)            |   Inserts a copy of an element initialized with args before iterator position pos and returns the 
-                                      position of the new element (since C++11)
-c.emplace_back(args...)           |   Appends a copy of an element initialized with args at the end (returns nothing; since C++11)
-c.emplace_front(args...)          |   Inserts a copy of an element initialized with args at the beginning (returns nothing; since C++11)
-c.erase(pos)                      |   Removes the element at iterator position pos and returns the position of the next element
-c.erase(beg,end)                  |   Removes all elements of the range (beg,end) and returns the position of the next element
-c.remove(val)                     |   Removes all elements with value val
-c.remove_if(op)                   |   Removes all elements for which op(elem) yields true
-c.resize(num)                     |   Changes the number of elements to num (if size() grows new elements are created by their default                                         constructor)
-c.resize(num,elem)                |   Changes the number of elements to num (if size() grows new elements are copies of elem)
-c.clear()                         |   Removes all elements (empties the container)                                                       
+c.emplace(pos,args...)            |   Inserts a copy of an element initialized with args before iterator position pos and returns the                                                     
