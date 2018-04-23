@@ -8,7 +8,7 @@
 
 • Sets e multisets podem ser comparados, pois existem sobrecargas dos operadores de comparação pra eles, todos os operadores de 
   comparação executam uma comparação lexicográfica exeto os operadores == e != 
-  http://en.cppreference.com/w/cpp/container/multiset/operator_cmp & http://en.cppreference.com/w/cpp/container/set/operator_cmp.
+  [multiset cmp operator](http://en.cppreference.com/w/cpp/container/multiset/operator_cmp) & [set cmp operator](http://en.cppreference.com/w/cpp/container/set/operator_cmp)
   
 • Sets e multisets por serem otimizados para busca rápida de elementos, eles fornecem funções de busca especiais. Essas funções são
   versões especiais de algoritmos gerais que possuem o mesmo nome. Você deve sempre preferir versões otimizadas para sets e multisets
@@ -125,8 +125,8 @@ set c(c2)             |           Copy constructor; creates a copy of another se
 set c = c2            |           Copy constructor; creates a copy of another set/multiset of the same type (all elements are copied)
 set c(rv)             |           Move constructor; creates a new set/multiset of the same type, taking the contents of the rvalue rv
 set c = rv            |           Move constructor; creates a new set/multiset of the same type, taking the contents of the rvalue rv
-set c(beg,end)        |           Creates a set/multiset initialized by the elements of the range [beg,end)
-set c(beg,end,op)     |           Creates a set/multiset with the sorting criterion op initialized by the elements of the range [beg,end)
+set c(beg,end)        |           Creates a set/multiset initialized by the elements of the range (beg,end)
+set c(beg,end,op)     |           Creates a set/multiset with the sorting criterion op initialized by the elements of the range (beg,end)
 set c(initlist)       |           Creates a set/multiset initialized with the elements of initializer list initlist
 set c = initlist      |           Creates a set/multiset initialized with the elements of initializer list initlist (since C++11)
 c.~set()              |           Destroys all elements and frees the memory
@@ -169,7 +169,7 @@ std::set<float, std::greater<float> > c2;
 if (c1 == c2) { // ERROR: tipos diferentes
 ...
 }
-```                                                                                                                               ````
+```
 
 A checagem se o container é menor do que um outro container é feito por comparação lexográfica. Para comparar container de tipos 
 diferentes (sorting criteria difrentes), você deve usa algoritmos de comparação.
@@ -193,14 +193,13 @@ c.equal_range(val)       |          Returns a range with all elements with a val
                                    
                                    
 A função membro `find()` procura o primeiro elemento que tem o valor que foi passado como argumento e retorna um iterator da posição.
-Se tal elemento não for encontrado, fid() retorna `end()` do container.
-`lower_bound()` e `upper_bound()` return a primeira e última posição, respectivamente, no qual um elemento com o valor passado seria
-inserido. Em outras palavras, `lower_bound()` retorna a posição do primeiro elemento que tem o mesmo ou maior valor que o argumento,
-enquanto que upper_bound retorna a posição do primeiro elemento com um valor maior. `equal_range()` retorna ambos os retornos de
-`lower_bound()` e `upper_bound()` como um pair. Portanto, `equal_range()` retorna um range de elementos que tem o mesmo valor que o 
-argumento. Se `lower_bound()` ou o primeiro valor de `equal_range()` é igual ao `upper_bound()` ou o segundo valor de `equal_range()`,
-não existem elementos com o mesmo valor no set ou multiset. Naturalmente, o range de elementos tendo o mesmo valor poderiam conter
-no máximo on elemento no set.
+Se tal elemento não for encontrado, fid() retorna `end()` do container. `lower_bound()` e `upper_bound()` return a primeira e última 
+posição, respectivamente, no qual um elemento com o valor passado seria inserido. Em outras palavras, `lower_bound()` retorna a posição
+do primeiro elemento que tem o mesmo ou maior valor que o argumento, enquanto que upper_bound retorna a posição do primeiro elemento com
+um valor maior. `equal_range()` retorna ambos os retornos de `lower_bound()` e `upper_bound()` como um pair. Portanto, `equal_range()` 
+retorna um range de elementos que tem o mesmo valor que o argumento. Se `lower_bound()` ou o primeiro valor de `equal_range()` é igual 
+ao `upper_bound()` ou o segundo valor de `equal_range()`, não existem elementos com o mesmo valor no set ou multiset. Naturalmente, o 
+range de elementos tendo o mesmo valor poderiam conter no máximo on elemento no set.
 
 O seguinte exemplo mostra como usar `lower_bound()`, `upper_bound()`, e `equal_range()`:
 
@@ -284,13 +283,13 @@ Operação                            |          Efeito
 ------------------------------------|------------------------------------------------------------------------
 c.insert(val)                       |          Inserts a copy of val and returns the position of the new element and, for sets, whether it succeeded
 c.insert(pos,val)                   |          Inserts a copy of val and returns the position of the new element (pos is used as a hint pointing to where the insert should start the search)
-c.insert(beg,end)                   |          Inserts a copy of all elements of the range [beg,end) (returns nothing)
+c.insert(beg,end)                   |          Inserts a copy of all elements of the range (beg,end) (returns nothing)
 c.insert(initlist)                  |          Inserts a copy of all elements in the initializer list initlist (returns nothing;  since C++11)
 c.emplace(args...)                  |          Inserts a copy of an element initialized with args and returns the position of the new element and, for sets, whether it succeeded (since C++11)
 c.emplace_hint(pos,args...)         |          Inserts a copy of an element initialized with args and returns the position of the new element (pos is used as a hint pointing to where the insert should start the search)
 c.erase(val)                        |          Removes all elements equal to val and returns the number of removed elements
 c.erase(pos)                        |          Removes the element at iterator position pos and returns the following position  (returned nothing before C++11)
-c.erase(beg,end)                    |          Removes all elements of the range [beg,end) and returns the following position  (returned nothing before C++11)
+c.erase(beg,end)                    |          Removes all elements of the range (beg,end) and returns the following position  (returned nothing before C++11)
 c.clear()                           |          Removes all elements (empties the container)
 
                                                                                   
