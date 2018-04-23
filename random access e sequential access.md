@@ -1,5 +1,4 @@
-- Acesso sequencial
-Significa que o custo de acessar o quinto elemento de um vetor é 5 vezes maior de que acessar o primeiro elemento.
+**Acesso sequencial** Significa que o custo de acessar o quinto elemento de um vetor é 5 vezes maior de que acessar o primeiro elemento.
 Basicamente para você ter acesso ao quinto elemento, é necessario passar por todos os outros quatro elementos antes de acessar o quinto,
 dessa forma, quanto maior for o vetor, maior será o tempo de busca.
 
