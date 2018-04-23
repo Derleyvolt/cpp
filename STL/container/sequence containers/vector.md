@@ -171,7 +171,7 @@ Uma inserção que causa uma realocação invalida todas as referências, iterat
 que remova diretamente elementos que tenham um certo valor. Você deve usar um algoritmo para isto.
       
 Operação                 |   Efeito
--------------------------------------------------------
+-------------------------|-----------------------------
 c.push_back(elem)        |   Appends a copy of elem at the end
 c.pop_back()             |   Removes the last element (does not return it)
 c.insert(pos, elem)      |   Inserts a copy of elem before iterator position pos and returns the position of the new element
