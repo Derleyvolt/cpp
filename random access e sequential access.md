@@ -1,10 +1,3 @@
-//   Assunto: Acesso aleatório e acesso sequencial / Random access e sequential access
-//     Fonte: https://stackoverflow.com/questions/24147609/stl-what-is-random-access-and-sequential-access
-//   Opinião: 
-//      Data: 17/03/2018
-//     Autor: Vários
-//       IDE: 
-
 Acesso sequencial: Significa que o custo de acessar o quinto elemento de um vetor é 5 vezes maior de que acessar o primeiro elemento.
 Basicamente para você ter acesso ao quinto elemento, é necessario passar por todos os outros quatro elementos antes de acessar o quinto,
 dessa forma, quanto maior for o vetor, maior será o tempo de busca.
@@ -18,14 +11,15 @@ Exemplo de acesso aleatório:
 pegando elementos, independente da ordem ou sequencia.
 o fator importante é que nós estamos selecionando itens por algum tipo de index.
 
+```cpp
 auto a = container[25];
 auto b = container[1];
 auto c = container["hi"];
-
+```
 
 Observações:
 
 é importante notar que o termo "sequencial" pode se referir a armazenamento ou acesso. Por exemplo:
 
-std::vector é um container com armazenamento sequencial e com acesso aleatório, enquanto std::list é um container
+`std::vector` é um container com armazenamento sequencial e com acesso aleatório, enquanto `std::list` é um container
 de armazenamento sequencial e acesso sequencial. 
