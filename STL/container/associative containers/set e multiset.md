@@ -225,15 +225,17 @@ int main ()
     cout << "equal_range(5): " << *c.equal_range(5).first << " " << *c.equal_range(5).second << endl;
 }
 ```
-                                                                                                                                 
+
 O output do programa é o seguinte:
 
+```
 lower_bound(3): 4
 upper_bound(3): 4
 equal_range(3): 4 4
 lower_bound(5): 5
 upper_bound(5): 6
 equal_range(5): 5 6
+```
 
 Se você usar um multiset ao invés de um set, o programa tem o mesmo output.
 
