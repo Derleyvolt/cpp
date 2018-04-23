@@ -407,7 +407,7 @@ if (pos != coll.end())
 }
 ```
 
-pelo fato de ser mais rápido, você deve usar a função membro `find()` ao invés do algoritmo `find()`.
+Pelo fato de ser mais rápido, você deve usar a função membro `find()` ao invés do algoritmo `find()`.
 Perceba que antes C++11, as funções `erase()` de containers associativos não retornavam nada (tinha tipo de retorno void). A razão era
 performance. Pode custar tempo para encontrar e retornar o sucessor em um container associativo, pois o container é implementado como
 uma árvore binária. Portanto, este é um muito complicado código onde você apaga elementos enquanto itera sobre eles.
