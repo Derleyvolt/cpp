@@ -3,12 +3,12 @@
 - lento na inserção e remoção no meio do container
 - rápido na inserção e remoção no final do container
 
-1 - Os elementos são armazenados sequencialmente na memória, ou seja, permite acesso aleatório legitimo.
+- Os elementos são armazenados sequencialmente na memória, ou seja, permite acesso aleatório legitimo.
 
-2 - Lento na inserção e remoção no meio do container causam lentidão pois todos os outros elementos acima da posição inserida/deletada
-    tem suas posições movidas.
+- Lento na inserção e remoção no meio do container causam lentidão pois todos os outros elementos acima da posição inserida/deletada
+  tem suas posições movidas.
     
-3 - Rápido na inserção e remoção de elementos que estão no final do container pois não há elementos para serem movidos.
+- Rápido na inserção e remoção de elementos que estão no final do container pois não há elementos para serem movidos.
 
 
 
@@ -30,7 +30,8 @@ A 'capacity' do vetor é importante por duas razões:
   Basicamente o vector faz uma cópia do elemento quando o elemento é inserido, quando a capacidade do vector é excedida o vector
   vai recolocar todos os elementos em um array maior, então o construtor de cópia/move de todos os elementos são chamados, tornado
   assim a realocação uma operação pesada, use ponteiros ou smart pointers.
-      
+  
+  ```js
   std::vector<int> v;  // cria um vetor vazio
   v.reserve(80);       // reserva memória para 80 elementos
 
@@ -41,7 +42,7 @@ A 'capacity' do vetor é importante por duas razões:
   vec.push_back(something); // copy é chamado e o vetor é realocado, sendo assim, o primeiro indice tem seu copy chamado novamente
                             // pro novo array alocado.
   vec.push_back(something); // copy é chamado e o vetor é realocado, os 2 primeiros indices tem seus copy chamados novamente..
-
+  ```
   com total de 6 copys chamados..
 
  
@@ -49,12 +50,14 @@ A 'capacity' do vetor é importante por duas razões:
   Uma outra maneira de evitar realocação é inicializar um vector com elementos suficiente passando um argumento adicional ao 
   construtor. Por exemplo, se você passa um valor númerico como parâmetro, isso é tomado como o tamanho inicial do vetor:
 
+  ```js
   std::vector<T> vec(5);  // cria um vector e inicializa ele com 5 valores
                           // chama 5 vezes o construtor padrão de tipo T
+  ```
  
   
 
-================================= CONSTRUTORES E DESTRUTORES DO VECTOR =========================================================
+## Construtores e destrutore do vetor
     
 Operação                          Efeito
 
@@ -69,10 +72,9 @@ vector<Elem> c(beg,end)           Creates a vector initialized with the elements
 vector<Elem> c(initlist)          Creates a vector initialized with the elements of initializer list initlist (since C++11)
 vector<Elem> c = initlist         Creates a vector initialized with the elements of initializer list initlist (since C++11)
 c.~vector()                       Destroys all elements and frees the memory
-===============================================================================================================================
  
                                                                                                
-================================== OPERAÇÕES NÃO MODIFICÁVEIS ================================================================= 
+## Operadores não modificáveis
                                                                                                
 Operação                          Efeito
 
@@ -88,10 +90,9 @@ c1 < c2                           Returns whether c1 is less than c2
 c1 > c2                           Returns whether c1 is greater than c2 (equivalent to c2<c1)
 c1 <= c2                          Returns whether c1 is less than or equal to c2 (equivalent to !(c2<c1))
 c1 >= c2                          Returns whether c1 is greater than or equal to c2 (equivalent to!(c1<c2))                                                                                             
-===============================================================================================================================
              
                                                                                                
-=========================================== ATRIBUIÇÃO ========================================================================
+## Atribuição
 
 Listas de maneiras para atribuir novos elementos.
                                                                                                
@@ -106,10 +107,8 @@ c.assign(initlist)            Assigns all the elements of the initializer list i
 c1.swap(c2)                   Swaps the data of c1 and c2
 swap(c1,c2)                   Swaps the data of c1 and c2                                                                                     
 
-===============================================================================================================================
 
-
-================================== ACESSO AOS ELEMENTOS =======================================================================
+## Acesso aos elementos
 
 Para acessar todos os elementos de um vector, você deve usar um range-base for loops, operações especificas, ou iterators.
 Como geralmente em C e C++, o primeiro elemento tem índice 0, e o último elemento tem índice size() - 1. Embora o n ésimo
@@ -122,10 +121,8 @@ c[idx]                Returns the element with index idx (no range checking)
 c.at(idx)             Returns the element with index idx (throws range-error exception if idx is out of range)
 c.front()             Returns the first element (no check whether a first element exists)
 c.back()              Returns the last element (no check whether a last element exists)                                                    
-===============================================================================================================================
-
                                                                  
-===================================== FUNÇÕES ITERATORS =======================================================================                                                             
+## Funções iterators                                                          
                                                                  
 Iterators permanecem válidos até que um elemento com índice menor é inserido ou removido ou até que uma realocação ocorra e a 
 capacidade mude.
@@ -140,17 +137,16 @@ c.rbegin()                 Returns a reverse iterator for the first element of a
 c.rend()                   Returns a reverse iterator for the position after the last element of a reverse iteration
 c.crbegin()                Returns a constant reverse iterator for the first element of a reverse iteration (since C++11)
 c.crend()                  Returns a constant reverse iterator for the position after the last element of a reverse iteration 
-                           (since C++11)                                                              
-===============================================================================================================================                                                         
-
+                           (since C++11)                                                                                                                  
                                                                  
-===================================== INSERINDO E REMOVENDO ELEMENTOS =========================================================                                                                 
+## Inserindo e removendo elementos                                                              
                                                                  
 quando nós estamos usando STL, você deve assegurar que os argumentos são válidos. Iterators devem referir-se a posições válidos,
 e o inicio de um rage deve ser uma posição que não esteja além do final.                                                        
 
 Como de costume, cabe ao programador garantir que o container não esteja vazio quando pop_back() é chamado. Por exemplo:                                                              
-                                                                 
+    
+```cpp                                                                 
 std::vector<Elem> coll;   // vazio
                                                                  
 coll.pop_back();          // RUNTIME ERROR ⇒ comportamento indefinido
@@ -158,7 +154,8 @@ coll.pop_back();          // RUNTIME ERROR ⇒ comportamento indefinido
 if (!coll.empty()) 
 {
     coll.pop_back();      // OK
-}                                                                 
+}
+```                                                                 
 
 Embora, note que em um contexto multithread você tem que garantir que coll não seja modificado entre a checagem do empty() e
 pop_back().
@@ -193,5 +190,4 @@ c.erase(beg, end)                          Removes all elements of the range [be
 c.resize(num)                              Changes the number of elements to num (if size() grows new elements are created by their 
                                            default constructor)
 c.resize(num, elem)                        Changes the number of elements to num (if size() grows new elements are copies of elem)
-c.clear()                                  Removes all elements (empties the container) 
-===============================================================================================================================                                                                    
+c.clear()                                  Removes all elements (empties the container)                                                                     
