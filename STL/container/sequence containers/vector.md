@@ -186,7 +186,6 @@ c.emplace_back(args...)  |   Appends a copy of an element initialized with args 
 c.erase(pos)             |   Removes the element at iterator position pos and returns the position of the next element
 c.erase(beg, end)        |   Removes all elements of the range (beg,end) and returns the position of the next element
 c.resize(num)            |   Changes the number of elements to num (if size() grows new elements are created by their 
-                         |   default constructor)
-                         
+                         |   default constructor)                         
 c.resize(num, elem)      |   Changes the number of elements to num (if size() grows new elements are copies of elem)
 c.clear()                |   Removes all elements (empties the container)                                                 ```       
