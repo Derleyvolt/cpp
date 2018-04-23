@@ -30,7 +30,7 @@ Inserção e remoção de elements não inválida ponteiros, referências e iter
 Uma lista suporta 'exception handling' de tal maneira que quase todas as operações são bem-sucedidas ou são no-op.
 Embora, você não pode estar em um estado intermediário no qual apenas metade da operação está completa.
 
-As funções membros providas pela list refletem essas diferenças de arrys, vectors e deques:
+As funções membros providas pela list refletem essas diferenças de arrays, vectors e deques:
 
 Listas provém `front()`, `push_front()`, e `pop_front()`, também `back()`, `push_back()`,
 e `pop_back()`.
