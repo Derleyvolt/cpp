@@ -1,3 +1,5 @@
+# Functor
+
 Functions (function objets ou functionals) é simplesmente um objeto + ().
   
 Em outras palavras, um functor é qualquer objeto que pode ser usado com () da meneira que uma função..
@@ -15,12 +17,14 @@ como uma função.
 Por exemplo, nós poderiamos definir uma struct nomeada como absValue que encapsula a operação de converter um valor de tipo float para
 seu absoluto valor:
   
+```cpp
 #include <iostream>
 
 struct absValue
 {
-    float operator()(float f) {
-      return f > 0 ? f : -f;
+    float operator()(float f) 
+    {
+        return f > 0 ? f : -f;
     }
 };
 
@@ -34,9 +38,9 @@ int main( )
     cout << "f = " << f << " abs_f = " << abs_f << endl;
     return 0; 
 }
+```
 
-output: f = -123.45 abs_f = 123.45
-  
+`output: f = -123.45 abs_f = 123.45`
   
   
 Sendo bem direto, as vantagens que uma função objeto tem sobre uma função normal é o fato de que uma função objeto pode ter várias
