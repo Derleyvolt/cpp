@@ -41,7 +41,7 @@ Listas não provém operações para capacidade ou realocação, pois isso não 
 memória que permanece válida até o elemento ser deletado.
   
 Listas provém várias funções membros especiais para mover e remover elementos. Essas funções membros são versões mais
-rapidas doque algoritmos gerais que possuem o mesmo nome. Elas são mais rapidas porque elas apenas redirecionam ponteiros
+rapidas do que algoritmos gerais que possuem o mesmo nome. Elas são mais rapidas porque elas apenas redirecionam ponteiros
 ao invés de copiar e mover valores.
 
 ## Construtores e destrutores da lista
