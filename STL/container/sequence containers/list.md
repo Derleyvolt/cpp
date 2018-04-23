@@ -35,7 +35,7 @@ As funções membros providas pela list refletem essas diferenças de arrays, ve
 Listas provém `front()`, `push_front()`, e `pop_front()`, também `back()`, `push_back()`,
 e `pop_back()`.
 
-Listas não possuem nem um operator subscript nem at(), porque acesso aleatório/random acess não é possível.
+Listas não possuem nem um operator subscript nem at(), porque acesso aleatório/random access não é possível.
 
 Listas não provém operações para capacidade ou realocação, pois isso não é necessário. Cada elemento tem sua própria
 memória que permanece válida até o elemento ser deletado.
