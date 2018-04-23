@@ -302,7 +302,7 @@ Para multisets, desde C++11 é garantido que `insert()`, `emplace()`, e `erase()
 e que inserção de elementos são colocados no final de valores equivalentes existentes. Note que os tipos de retorno das funções de 
 inserção `insert()` e `emplace()` diferem no seguinte:
 
-Sets fornece a seguinte interface:
+• Sets fornece a seguinte interface:
                                                                                   
 ```cpp                                                                                  
 pair<iterator,bool>           insert (const value_type& val);
@@ -336,6 +336,7 @@ pode falir para um set se já existe um elemento com o mesmo valor. Portanto, um
 
 Em todos os outros casos, as funções retornam a posição do novo elemento ou de um elemento existente se o set já contém um elemento
 com o mesmo valor.
+
 Os seguintes exemplos mostram como usar esta interface para inserir um elemento em um set. Isto tenta inserir um elemento com valor
 3.3 em um set:
 
@@ -396,8 +397,7 @@ coll.erase(value);
 
 Perceba que essa função membro tem um nome diferente de `remove()` fornecida por lists. erase se comporta diferentemente na medida em que
 retorna o número de elementos removidos. Quando chamado por sets, ela retorna apenas 0 ou 1, pois não existem elementos equivalentes em
-sets. Se um multiset contém duplicatas, você não pode usar `erase()` para remover apenas o primeiro elemento dessas duplicatas. Ao invés,
-você pode usar o seguinte:
+sets. Se um multiset contém duplicatas, você não pode usar `erase()` para remover apenas o primeiro elemento dessas duplicatas. Ao invés, você pode usar o seguinte:
 
 ```cpp
 std::multiset<Elem>::iterator pos;
@@ -409,11 +409,4 @@ if (pos != coll.end())
 }
 ```
 
-Pelo fato de ser mais rápido, você deve usar a função membro `find()` ao invés do algoritmo `find()`.
-Perceba que antes C++11, as funções `erase()` de containers associativos não retornavam nada (tinha tipo de retorno void). A razão era
-performance. Pode custar tempo para encontrar e retornar o sucessor em um container associativo, pois o container é implementado como
-uma árvore binária. Portanto, este é um muito complicado código onde você apaga elementos enquanto itera sobre eles.
-Oberve também que para sets que usam iteratos como elementos, chamar `erase()` pode ser 'ambiguous'. Por esta razão, C++11 fornece
-sobrecargas para ambos erase(iterator) e erase(const_iterator). Para multisets, todas as operações `insert()`, `emplace()`, e `erase()`
-preservam a ordem relativa dos elementos equivalentes. Desde C++11, chamar insert(val) ou emplace(args...) garante que o novo elemento
-é inserido no final do range dos elementos equivalentes.
+Pelo fato de ser mais rápido, você deve usar a função membro `find()` ao invés do algoritmo `find()`. Perceba que antes C++11, as funções `erase()` de containers associativos não retornavam nada (tinha tipo de retorno void). A razão era performance. Pode custar tempo para encontrar e retornar o sucessor em um container associativo, pois o container é implementado como uma árvore binária. Portanto, este é um muito complicado código onde você apaga elementos enquanto itera sobre eles. Oberve também que para sets que usam iteratos como elementos, chamar `erase()` pode ser 'ambiguous'. Por esta razão, C++11 fornece sobrecargas para ambos erase(iterator) e erase(const_iterator). Para multisets, todas as operações `insert()`, `emplace()`, e `erase()` preservam a ordem relativa dos elementos equivalentes. Desde C++11, chamar insert(val) ou emplace(args...) garante que o novo elemento é inserido no final do range dos elementos equivalentes.
