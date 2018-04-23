@@ -1,5 +1,11 @@
 # Functor
 
+A habilidade de tratar funções como valores, combinada com o fato de que variáveis locais são recriadas toda vez que uma função é invocada; isso traz à tona uma questão interessante.
+
+O que acontece com as variáveis locais quando a função que as criou não está mais ativa?
+
+O código a seguir mostra um exemplo disso. Ele define uma função wrapValue que cria uma variável local e retorna uma função que acessa e retorna essa variável.
+
 Functions (function objets ou functionals) é simplesmente um objeto + ().
   
 Em outras palavras, um functor é qualquer objeto que pode ser usado com () da meneira que uma função..
