@@ -1,10 +1,12 @@
-- random acess(por index)
-- lento na inserção e remoção no meio do container
-- rápido na inserção e remoção no final do container
+# Vector
 
-- Os elementos são armazenados sequencialmente na memória, ou seja, permite acesso aleatório legitimo.
+- Random acess(por index)
+- Lento na inserção e remoção no meio do container
+- Rápido na inserção e remoção no final do container
 
-- Lento na inserção e remoção no meio do container causam lentidão pois todos os outros elementos acima da posição inserida/deletada
+- Os elementos são armazenados sequencialmente na memória, ou seja, permite acesso aleatório legítimo.
+
+- Lento na inserção e remoção no meio do container, causam lentidão pois todos os outros elementos acima da posição inserida/deletada
   tem suas posições movidas.
     
 - Rápido na inserção e remoção de elementos que estão no final do container pois não há elementos para serem movidos.
