@@ -1,7 +1,9 @@
 
-- rápido na inserção ou remoção em qualquer localização
-- rápido acesso em ambas as extremidades
-- lento acesso aleatório
+# List
+
+- Rápido na inserção ou remoção em qualquer localização
+- Rápido acesso em ambas as extremidades
+- Lento acesso aleatório
 
 
 É uma lista bi-dimensional que permite inserção e remoção rápida de elementos em qualquer posição. Elementos na lista não são continuos.
