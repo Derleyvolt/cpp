@@ -170,7 +170,7 @@ Inserção ou remoção de elementos invalidam referências, ponteiros, e iterat
 Uma inserção que causa uma realocação invalida todas as referências, iterators e ponteiros. Vector não provém operação
 que remova diretamente elementos que tenham um certo valor. Você deve usar um algoritmo para isto.
       
-Operação                         Efeito
+Operação                 |        Efeito
 -------------------------|----------------------------------------------------------------------------------------------------
 c.push_back(elem)        |   Appends a copy of elem at the end
 c.pop_back()             |   Removes the last element (does not return it)
