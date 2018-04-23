@@ -169,7 +169,8 @@ A respeito da performance, você deve considerar que inserção e remoção acon
 Inserção ou remoção de elementos invalidam referências, ponteiros, e iterators que referem-se ao seguintes elementos.
 Uma inserção que causa uma realocação invalida todas as referências, iterators e ponteiros. Vector não provém operação
 que remova diretamente elementos que tenham um certo valor. Você deve usar um algoritmo para isto.
-                                                                 
+    
+```    
 Operação                                   Efeito
 
 c.push_back(elem)                          Appends a copy of elem at the end
@@ -190,4 +191,4 @@ c.erase(beg, end)                          Removes all elements of the range (be
 c.resize(num)                              Changes the number of elements to num (if size() grows new elements are created by their 
                                            default constructor)
 c.resize(num, elem)                        Changes the number of elements to num (if size() grows new elements are copies of elem)
-c.clear()                                  Removes all elements (empties the container)                                                                     
+c.clear()                                  Removes all elements (empties the container)                                                 ```                   
