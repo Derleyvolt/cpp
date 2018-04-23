@@ -98,7 +98,7 @@ swap(c1,c2)               |              Swaps the data of c1 and c2
 ## Acesso aos elementos
    
 Para acessar todos os elementos da lista, você deve usar range-based for loops, operações especificas ou iterators. Porque listas
-não possuem random acess/acesso aleatório, listas provém apenas front() e back() para acessar os elementos diretamente.
+não possuem random access/acesso aleatório, listas provém apenas front() e back() para acessar os elementos diretamente.
                                                                                                                                                                                                                           
 Operação             |              Efeitos
 ---------------------|-------------------------------
@@ -124,8 +124,8 @@ zação garantam que coll não seja modificado entre a checagem de seu tamanho e
 ## Acesso aos elementos
                                                                            
 Para acessar todos os elemento de uma lista, você deve usar iterators. Listas fornecem as funções usuais dos iterators. Embora,
-pelo fato da lista não possuir random acess, esses iterators são apenas bidirecionais. Portanto, você não pode chamar algoritmos
-que requerem `random-acess iterators`. Todos os algoritmos que manipulam a ordem de muitos elementos, especialmente algortimos de 
+pelo fato da lista não possuir random access, esses iterators são apenas bidirecionais. Portanto, você não pode chamar algoritmos
+que requerem `random-access iterators`. Todos os algoritmos que manipulam a ordem de muitos elementos, especialmente algortimos de 
 sort, são desta categoria. Embora, para ordenar/sorting os elementos, listas fornecem a função membro especial `sort()`.
                                                                            
 Operação                |                 Efeitos
