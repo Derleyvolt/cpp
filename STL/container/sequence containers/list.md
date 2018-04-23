@@ -104,7 +104,7 @@ c.front()            |             Returns the first element (no check whether a
 c.back()             |              Returns the last element (no check whether a last element exists)                                                                           
                                                                                                                                                       
 Como sempre, essas operações não checam se o container está vazio. Se o container estiver vazio, chamar essas operações resultará
-em `undefined behavior`. Portanto, o chamador deve garantir que o container contém pelo menos um elemento. Por exemplo
+em `undefined behavior`. Portanto, o chamador deve garantir que o container contém pelo menos um elemento. Por exemplo:
 
 ```cpp                                                                                      
 std::list<Elem> coll;      // vazio!
