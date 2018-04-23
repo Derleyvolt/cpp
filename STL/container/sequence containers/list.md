@@ -102,11 +102,11 @@ Operação             |              Efeitos
 ---------------------|-------------------------------
 c.front()            |             Returns the first element (no check whether a first element exists)
 c.back()             |              Returns the last element (no check whether a last element exists)                                                                           
-
                                                                                                                                                       
 Como sempre, essas operações não checam se o container está vazio. Se o container estiver vazio, chamar essas operações resultará
-em `undefined behavior`. Portanto, o chamador deve garantir que o container contém pelo menos um elemento. Por exemplo:
-                                                                                                                                         ```cpp                                                                                      
+em `undefined behavior`. Portanto, o chamador deve garantir que o container contém pelo menos um elemento. Por exemplo
+
+```cpp                                                                                      
 std::list<Elem> coll;      // vazio!
 std::cout << coll.front(); // RUNTIME ERROR ⇒ undefined behavior
                                                                            
@@ -161,8 +161,7 @@ elementos por uma função ou uma função object. `remove_if()` remove todo ele
 Um exemplo do uso de `remove_if()` é uma declaração para remover todos os elementos que tem um valor par:                                                                           
                                                                            
 ```cpp                                                                       
-// remover todos os elementos que são par
-coll.remove_if ([] (int i) 
+coll.remove_if ([] (int i) // remover todos os elementos que são par
 {
     return i % 2 == 0;
 });  
