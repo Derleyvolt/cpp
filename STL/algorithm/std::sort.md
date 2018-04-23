@@ -23,8 +23,8 @@ Paramêtros:
 Comp:
 
   Função binária que aceita dois elementos no range como argumento, e retorna um bool. O valor retornado
-  indica se o primeiro elemento passado vem antes do segundo elemento passado em uma especifica [strict weak ordering]
-  (https://en.wikipedia.org/wiki/Weak_ordering) que isso define.
+  indica se o primeiro elemento passado vem antes do segundo elemento passado em uma especifica 
+  [strict weak ordering](https://en.wikipedia.org/wiki/Weak_ordering) que isso define.
   
   A função não deve modificar qualquer de seus elementos.
   A função pode ser um ponteiro para função ou uma função objeto.
@@ -41,4 +41,4 @@ Comp:
   }
   ```    
 
-  Complexidade: O(n * log(n))
+  `Complexidade: O(n * log(n))`
