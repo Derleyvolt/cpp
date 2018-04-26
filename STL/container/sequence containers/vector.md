@@ -14,7 +14,7 @@
 
 
 O metodo `capacity()` retorna a quantidade de elementos que o vetor suporta no momento, diferente do metodo size(), por exemplo,
-se resevar-mos 10 espaços pro vector através do metodo `reserve()`, o metodo `size()` retornaria 0, enquanto o `capacity()` retornaria 
+se reservarmos 10 espaços pro vector através do metodo `reserve()`, o metodo `size()` retornaria 0, enquanto o `capacity()` retornaria 
 10.
 
 A 'capacity' do vetor é importante por duas razões:
