@@ -1,6 +1,6 @@
 # Vector
 
-- Random acess(por index)
+- Random access(por index)
 - Lento na inserção e remoção no meio do container
 - Rápido na inserção e remoção no final do container
 
