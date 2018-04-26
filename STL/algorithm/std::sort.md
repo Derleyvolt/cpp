@@ -1,4 +1,4 @@
-# Função sort
+# Sort
 
 Organiza elementos em um range.
 
