@@ -19,7 +19,7 @@ se reservarmos 10 espaços pro vector através do metodo `reserve()`, o metodo `
 
 A 'capacity' do vetor é importante por duas razões:
 
-  1. Realocação inválida todas as referências, ponteiros, e iterators para elementos do vetor.
+  1. Realocação invalida todas as referências, ponteiros, e iterators para elementos do vetor.
   2. Ralocação leva tempo.
   
   Uma maneira de evitar referências inválidas ou ponteiros inválidos é criar um vector de ponteiros para objeto ao invés
