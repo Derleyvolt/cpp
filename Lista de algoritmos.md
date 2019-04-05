@@ -1,0 +1,56 @@
+- #### Flood fill
+- #### Ray casting
+- #### Lossless compression algorithms
+  - Lempel-Ziv compression 
+  - Huffman coding
+  - bzip2
+  - PNG
+  - Lossless video compression
+  - Zip (file format)
+- #### Lossy compression algorithms
+  - JPEG
+- #### Cryptograph algorithms
+  - RC4
+  - Blowfish
+  - AES
+- ####  Autentication algorithms
+  - SHA
+  - MD5
+  - HMAC
+- #### Image processing
+  - Spatial Lowpass
+  - Spatial Highpass
+  - Fourier Representation
+  - Fourier Lowpass
+  - Fourier Highpass
+  - Edge Detection
+  - etc..
+- #### Data structures algorithms
+- #### Search
+- #### Sorting
+- #### Convex hull algorithms
+- #### Collision detection algorithm
+- #### Closest pair problem
+- #### Point in polygon
+- #### Matrix Transformations
+  - Rotate
+  - Translate
+  - Scale
+- #### Polygon triangulation
+- #### Clipping
+  - Line clipping
+  - Polygon clipping
+- #### Terrain generator algorithm
+- #### Million particles
+- #### Calcular Pi de várias formas
+  - Monte Carlo
+  - Gauss-Legendre
+  - Método de cálculo isolado das decimais
+  - Métodos de séries infinitas
+  - Método de Arquimedes
+- #### Euler Fluids
+- #### Lea Algorithm - Pathfinding Algorithms
+- #### n-body simulation
+- #### Data Structures view?
+
+
