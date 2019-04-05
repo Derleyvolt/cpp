@@ -25,9 +25,28 @@
   - Fourier Highpass
   - Edge Detection
   - etc..
-- #### Data structures algorithms
 - #### Search
+  - Linear Search
+  - Binary Search
+  - Jump Search
+  - Interpolation Search
+  - Exponential Search
+  - Fibonacci Search
+  - Sublist Search
 - #### Sorting
+  - Quicksort
+  - Mergesort
+  - Timsort
+  - Heapsort
+  - Bubble Sort
+  - Insertion Sort
+  - Selection Sort
+  - Tree Sort
+  - Shell Sort
+  - Bucket Sort
+  - Radix Sort
+  - Counting Sort
+  - Cubesort
 - #### Convex hull algorithms
 - #### Collision detection algorithm
 - #### Closest pair problem
