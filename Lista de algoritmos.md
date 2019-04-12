@@ -72,4 +72,4 @@
 - #### n-body simulation
 - #### Data Structures view?
 - #### Como verificar se um número é primo?
-
+- #### Euclidean algorithm
