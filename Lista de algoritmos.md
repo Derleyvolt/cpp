@@ -73,4 +73,4 @@
 - #### Data Structures view?
 - #### Como verificar se um número é primo?
 - #### Euclidean algorithm
-- #### Vector graphics
+- #### Line drawing algorithm
