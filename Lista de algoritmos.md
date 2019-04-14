@@ -74,3 +74,4 @@
 - #### Como verificar se um número é primo?
 - #### Euclidean algorithm
 - #### Line drawing algorithm
+- #### Bresenham's line algorithm
