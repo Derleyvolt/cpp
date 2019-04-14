@@ -75,3 +75,4 @@
 - #### Euclidean algorithm
 - #### Line drawing algorithm
 - #### Bresenham's line algorithm
+- #### Chart
