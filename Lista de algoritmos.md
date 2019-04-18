@@ -79,3 +79,5 @@
 - #### Bresenham’s circle drawing algorithm
 - #### Radar verde
 - #### Crivo de Eratóstenes
+- #### Maze generator
+- #### Swarm intelligence
