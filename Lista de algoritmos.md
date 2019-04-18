@@ -76,7 +76,7 @@
 - #### Line drawing algorithm
 - #### Bresenham's line algorithm
 - #### Bresenham’s circle drawing algorithm
-- #### Chart [Wiki](https://en.wikipedia.org/wiki/Chart)
+- #### Chart [Wiki](https://en.wikipedia.org/wiki/Chart), [Link](https://www.advsofteng.com/gallery.html)
 - #### Radar verde
 - #### Crivo de Eratóstenes
 - #### Maze generator
