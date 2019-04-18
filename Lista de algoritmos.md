@@ -61,7 +61,7 @@
   - Polygon clipping
 - #### Terrain generator algorithm
 - #### Million particles
-- #### Calcular Pi de várias formas
+- #### Calcular Pi de várias formas [Wiki](https://pt.wikipedia.org/wiki/Pi)
   - Monte Carlo
   - Gauss-Legendre
   - Método de cálculo isolado das decimais
@@ -75,9 +75,12 @@
 - #### Euclidean algorithm
 - #### Line drawing algorithm
 - #### Bresenham's line algorithm
-- #### Chart
+- #### Chart [Wiki](https://en.wikipedia.org/wiki/Chart)
 - #### Bresenham’s circle drawing algorithm
 - #### Radar verde
 - #### Crivo de Eratóstenes
 - #### Maze generator
-- #### Swarm intelligence
+- #### Swarm intelligence [Wiki](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
+  - Boids -> [Boids](https://youtu.be/uMI1QcgfBeU)
+  - Ant colony optimization
+  - Bacterial Growth Simulation -> [Bacterial Growth](http://infection.inquiry-hub.net/)
