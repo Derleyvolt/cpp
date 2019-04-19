@@ -1,23 +1,23 @@
-- #### Flood fill
-- #### Ray casting
-- #### Lossless compression algorithms
+- [ ] Flood fill
+- [ ] Ray casting
+- ## Lossless compression
   - [ ] Lempel-Ziv compression 
   - [ ] Huffman coding
   - [ ] bzip2
   - [ ] PNG
   - [ ] Lossless video compression
   - [ ] Zip (file format)
-- #### Lossy compression algorithms
+- ## Lossy compression
   - [ ] JPEG
-- #### Cryptograph algorithms
+- ## Cryptograph
   - [x] RC4
   - [ ] Blowfish
   - [ ] AES
-- ####  Autentication algorithms
+- ##  Autentication
   - [ ] SHA
   - [x] MD5
   - [ ] HMAC
-- #### Image processing
+- ## Image processing
   - [ ] Spatial Lowpass
   - [ ] Spatial Highpass
   - [ ] Fourier Representation
@@ -25,8 +25,7 @@
   - [ ] Fourier Highpass
   - [ ] Edge Detection
 - [ ] Image Scaling [Link](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
-
-- #### Search
+- ## Search
   - [ ] Linear Search
   - [ ] Binary Search
   - [ ] Jump Search
@@ -34,7 +33,7 @@
   - [ ] Exponential Search
   - [ ] Fibonacci Search
   - [ ] Sublist Search
-- #### Sorting
+- ## Sorting
   - [ ] Quicksort
   - [ ] Mergesort
   - [ ] Timsort
@@ -48,21 +47,21 @@
   - [ ] Radix Sort
   - [ ] Counting Sort
   - [ ] Cubesort
-- [ ] Convex hull algorithms
-- [ ] Collision detection algorithm
+- [ ] Convex hull
+- [ ] Collision detection
 - [ ] Closest pair problem
 - [ ] Point in polygon
-- #### Matrix Transformations
+- ## Matrix Transformations
   - [ ] Rotate
   - [ ] Translate
   - [ ] Scale
 - [ ] Polygon triangulation
-- #### Clipping
+- ## Clipping
   - [ ] Line clipping
   - [ ] Polygon clipping
-- [ ] Terrain generator algorithm
+- [ ] Terrain generator
 - [ ] Million particles
-- #### Calcular Pi de várias formas [Wiki](https://pt.wikipedia.org/wiki/Pi)
+- ## Calcular Pi de várias formas [Wiki](https://pt.wikipedia.org/wiki/Pi)
   - [ ] Monte Carlo
   - [ ] Gauss-Legendre
   - [ ] Método de cálculo isolado das decimais
@@ -74,15 +73,15 @@
 - [ ] Data Structures view?
 - [ ] Como verificar se um número é primo?
 - [ ] Euclidean algorithm
-- [ ] Line drawing algorithm
-- [ ] Bresenham's line algorithm
-- [ ] Bresenham’s circle drawing algorithm
+- ## Line drawing
+  - [ ] Bresenham's line
+  - [ ] Bresenham’s circle drawing
 - [ ] Chart [Wiki](https://en.wikipedia.org/wiki/Chart), [Link](https://www.advsofteng.com/gallery.html)
 - [ ] Radar verde
 - [ ] Crivo de Eratóstenes
 - [ ] Maze generator
-- #### Swarm intelligence [Wiki](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
+- ## Swarm intelligence [Wiki](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
   - [ ] Boids -> [Boids](https://youtu.be/uMI1QcgfBeU)
   - [ ] Ant colony optimization
   - [ ] Bacterial Growth Simulation -> [Bacterial Growth](http://infection.inquiry-hub.net/)
-- [ ] Nearest neighbour algorithm [Wiki](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
+- [ ] Nearest neighbour [Wiki](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
