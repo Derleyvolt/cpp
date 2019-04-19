@@ -64,7 +64,7 @@
   - [ ] Boids -> [Boids](https://youtu.be/uMI1QcgfBeU)
   - [ ] Ant colony optimization
   - [ ] Bacterial Growth Simulation -> [Bacterial Growth](http://infection.inquiry-hub.net/)
-- #### 
+- #### Algoritmos individuais
 - [ ] Image Scaling [Link](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
 - [ ] Convex hull
 - [ ] Collision detection
