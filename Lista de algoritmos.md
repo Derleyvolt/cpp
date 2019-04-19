@@ -1,28 +1,28 @@
-- #### Lossless compression
+- #### [Lossless compression](https://en.wikipedia.org/wiki/Lossless_compression)
   - [ ] Lempel-Ziv compression 
   - [ ] Huffman coding
   - [ ] bzip2
   - [ ] PNG
   - [ ] Lossless video compression
   - [ ] Zip (file format)
-- #### Lossy compression
+- #### [Lossy compression](https://en.wikipedia.org/wiki/Lossy_compression)
   - [ ] JPEG
-- #### Cryptograph
+- #### [Cryptograph](https://en.wikipedia.org/wiki/Cryptography)
   - [x] RC4
   - [ ] Blowfish
   - [ ] AES
-- ####  Autentication
+- ####  [Cryptograph hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
   - [ ] SHA
   - [x] MD5
   - [ ] HMAC
-- #### Image processing
+- #### [Image processing](https://en.wikipedia.org/wiki/Digital_image_processing)
   - [ ] Spatial Lowpass
   - [ ] Spatial Highpass
   - [ ] Fourier Representation
   - [ ] Fourier Lowpass
   - [ ] Fourier Highpass
   - [ ] Edge Detection
-- #### Search
+- #### [Search](https://en.wikipedia.org/wiki/Search_algorithm)
   - [ ] Linear Search
   - [ ] Binary Search
   - [ ] Jump Search
@@ -30,7 +30,7 @@
   - [ ] Exponential Search
   - [ ] Fibonacci Search
   - [ ] Sublist Search
-- #### Sorting
+- #### [Sorting](https://en.wikipedia.org/wiki/Sorting_algorithm)
   - [ ] Quicksort
   - [ ] Mergesort
   - [ ] Timsort
@@ -44,11 +44,11 @@
   - [ ] Radix Sort
   - [ ] Counting Sort
   - [ ] Cubesort
-- #### Matrix Transformations
+- #### [Matrix Transformations](https://en.wikipedia.org/wiki/Transformation_matrix)
   - [ ] Rotate
   - [ ] Translate
   - [ ] Scale
-- #### Clipping
+- #### [Clipping](https://www.tutorialspoint.com/computer_graphics/viewing_and_clipping.htm)
   - [ ] Line clipping
   - [ ] Polygon clipping
 - #### [Calcular Pi de várias formas](https://pt.wikipedia.org/wiki/Pi)
@@ -57,7 +57,7 @@
   - [ ] Método de cálculo isolado das decimais
   - [ ] Métodos de séries infinitas
   - [ ] Método de Arquimedes
-- #### Line drawing
+- #### [Line drawing](https://en.wikipedia.org/wiki/Line_drawing_algorithm)
   - [ ] Bresenham's line
   - [ ] Bresenham’s circle drawing
 - #### [Swarm intelligence](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
@@ -66,23 +66,23 @@
   - [ ] [Bacterial Growth Simulation](http://infection.inquiry-hub.net/)
 - #### Algoritmos individuais
 - [ ] [Image Scaling](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
-- [ ] Convex hull
-- [ ] Collision detection
-- [ ] Closest pair problem
-- [ ] Point in polygon
-- [ ] Flood fill
-- [ ] Ray casting
-- [ ] Terrain generator
+- [ ] [Convex hull](https://en.wikipedia.org/wiki/Convex_hull)
+- [ ] [Collision detection](https://en.wikipedia.org/wiki/Collision_detection)
+- [ ] [Closest pair problem](https://en.wikipedia.org/wiki/Closest_pair_of_points_problem)
+- [ ] [Point in polygon](https://en.wikipedia.org/wiki/Point_in_polygon)
+- [ ] [Flood fill](https://en.wikipedia.org/wiki/Flood_fill)
+- [ ] [Ray casting](https://en.wikipedia.org/wiki/Ray_casting)
+- [ ] [Terrain generator](https://en.wikipedia.org/wiki/Diamond-square_algorithm)
 - [ ] Million particles
-- [ ] Polygon triangulation
-- [ ] Euler Fluids
-- [ ] Lea Algorithm - Pathfinding Algorithms
-- [ ] n-body simulation
+- [ ] [Polygon triangulation](https://en.wikipedia.org/wiki/Polygon_triangulation)
+- [ ] [Euler Fluids](https://en.wikipedia.org/wiki/Euler_equations_(fluid_dynamics))
+- [ ] [Lea Algorithm](https://en.wikipedia.org/wiki/Lee_algorithm)
+- [ ] [n-body simulation](https://en.wikipedia.org/wiki/N-body_simulation)
 - [ ] Data Structures view?
-- [ ] Como verificar se um número é primo?
+- [ ] [Primality test](https://en.wikipedia.org/wiki/Primality_test)
 - [ ] Euclidean algorithm
 - [ ] [Chart](https://en.wikipedia.org/wiki/Chart) -> [resource](https://www.advsofteng.com/gallery.html)
-- [ ] Radar verde
-- [ ] Crivo de Eratóstenes
-- [ ] Maze generator
+- [ ] Radar
+- [ ] [Maze generator](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
 - [ ] [Nearest neighbour](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
+- [ ] [Hidden-surface determination](https://en.wikipedia.org/wiki/Hidden-surface_determination)
