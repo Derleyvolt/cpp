@@ -51,7 +51,7 @@
 - #### [Clipping](https://www.tutorialspoint.com/computer_graphics/viewing_and_clipping.htm)
   - [ ] Line clipping
   - [ ] Polygon clipping
-- #### [Calcular Pi de várias formas](https://pt.wikipedia.org/wiki/Pi)
+- #### [Pi](https://pt.wikipedia.org/wiki/Pi)
   - [ ] Monte Carlo
   - [ ] Gauss-Legendre
   - [ ] Método de cálculo isolado das decimais
