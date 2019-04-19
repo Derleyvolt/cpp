@@ -25,6 +25,7 @@
   - Fourier Highpass
   - Edge Detection
   - etc..
+- #### Image Scaling [Link](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
 - #### Search
   - Linear Search
   - Binary Search
@@ -84,3 +85,4 @@
   - Boids -> [Boids](https://youtu.be/uMI1QcgfBeU)
   - Ant colony optimization
   - Bacterial Growth Simulation -> [Bacterial Growth](http://infection.inquiry-hub.net/)
+- ### Nearest neighbour algorithm [Wiki](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
