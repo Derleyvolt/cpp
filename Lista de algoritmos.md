@@ -10,12 +10,12 @@
 - #### Lossy compression algorithms
   - [ ] JPEG
 - #### Cryptograph algorithms
-  - [ ] RC4
+  - [x] RC4
   - [ ] Blowfish
   - [ ] AES
 - ####  Autentication algorithms
   - [ ] SHA
-  - [ ] MD5
+  - [x] MD5
   - [ ] HMAC
 - #### Image processing
   - [ ] Spatial Lowpass
