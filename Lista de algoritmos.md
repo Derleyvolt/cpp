@@ -1,6 +1,3 @@
-- [ ] Flood fill
-- [ ] Ray casting
---------------------------------
 - ## Lossless compression
   - [ ] Lempel-Ziv compression 
   - [ ] Huffman coding
@@ -50,12 +47,6 @@
   - [ ] Radix Sort
   - [ ] Counting Sort
   - [ ] Cubesort
---------------------------------
-- [ ] Convex hull
-- [ ] Collision detection
-- [ ] Closest pair problem
-- [ ] Point in polygon
---------------------------------
 - ## Matrix Transformations
   - [ ] Rotate
   - [ ] Translate
@@ -63,38 +54,36 @@
 - ## Clipping
   - [ ] Line clipping
   - [ ] Polygon clipping
---------------------------------
-- [ ] Terrain generator
-- [ ] Million particles
-- [ ] Polygon triangulation
---------------------------------
 - ## Calcular Pi de várias formas [Wiki](https://pt.wikipedia.org/wiki/Pi)
   - [ ] Monte Carlo
   - [ ] Gauss-Legendre
   - [ ] Método de cálculo isolado das decimais
   - [ ] Métodos de séries infinitas
   - [ ] Método de Arquimedes
---------------------------------
+- ## Line drawing
+  - [ ] Bresenham's line
+  - [ ] Bresenham’s circle drawing
+- ## Swarm intelligence [Wiki](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
+  - [ ] Boids -> [Boids](https://youtu.be/uMI1QcgfBeU)
+  - [ ] Ant colony optimization
+  - [ ] Bacterial Growth Simulation -> [Bacterial Growth](http://infection.inquiry-hub.net/)
+- [ ] Convex hull
+- [ ] Collision detection
+- [ ] Closest pair problem
+- [ ] Point in polygon
+- [ ] Flood fill
+- [ ] Ray casting
+- [ ] Terrain generator
+- [ ] Million particles
+- [ ] Polygon triangulation
 - [ ] Euler Fluids
 - [ ] Lea Algorithm - Pathfinding Algorithms
 - [ ] n-body simulation
 - [ ] Data Structures view?
 - [ ] Como verificar se um número é primo?
 - [ ] Euclidean algorithm
---------------------------------
-- ## Line drawing
-  - [ ] Bresenham's line
-  - [ ] Bresenham’s circle drawing
---------------------------------
 - [ ] Chart [Wiki](https://en.wikipedia.org/wiki/Chart), [Link](https://www.advsofteng.com/gallery.html)
 - [ ] Radar verde
 - [ ] Crivo de Eratóstenes
 - [ ] Maze generator
---------------------------------
-- ## Swarm intelligence [Wiki](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
-  - [ ] Boids -> [Boids](https://youtu.be/uMI1QcgfBeU)
-  - [ ] Ant colony optimization
-  - [ ] Bacterial Growth Simulation -> [Bacterial Growth](http://infection.inquiry-hub.net/)
---------------------------------
 - [ ] Nearest neighbour [Wiki](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
---------------------------------
