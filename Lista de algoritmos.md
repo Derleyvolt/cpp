@@ -51,7 +51,7 @@
 - #### Clipping
   - [ ] Line clipping
   - [ ] Polygon clipping
-- #### Calcular Pi de várias formas [Wiki](https://pt.wikipedia.org/wiki/Pi)
+- #### [Calcular Pi de várias formas](https://pt.wikipedia.org/wiki/Pi)
   - [ ] Monte Carlo
   - [ ] Gauss-Legendre
   - [ ] Método de cálculo isolado das decimais
@@ -60,12 +60,12 @@
 - #### Line drawing
   - [ ] Bresenham's line
   - [ ] Bresenham’s circle drawing
-- #### Swarm intelligence [Wiki](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
-  - [ ] Boids -> [Boids](https://youtu.be/uMI1QcgfBeU)
+- #### [Swarm intelligence](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
+  - [ ] [Boids](https://youtu.be/uMI1QcgfBeU)
   - [ ] Ant colony optimization
-  - [ ] Bacterial Growth Simulation -> [Bacterial Growth](http://infection.inquiry-hub.net/)
+  - [ ] [Bacterial Growth Simulation](http://infection.inquiry-hub.net/)
 - #### Algoritmos individuais
-- [ ] Image Scaling [Link](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
+- [ ] [Image Scaling](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
 - [ ] Convex hull
 - [ ] Collision detection
 - [ ] Closest pair problem
@@ -81,8 +81,8 @@
 - [ ] Data Structures view?
 - [ ] Como verificar se um número é primo?
 - [ ] Euclidean algorithm
-- [ ] Chart [Wiki](https://en.wikipedia.org/wiki/Chart), [Link](https://www.advsofteng.com/gallery.html)
+- [ ] [Chart](https://en.wikipedia.org/wiki/Chart) -> [resource](https://www.advsofteng.com/gallery.html)
 - [ ] Radar verde
 - [ ] Crivo de Eratóstenes
 - [ ] Maze generator
-- [ ] Nearest neighbour [Wiki](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
+- [ ] [Nearest neighbour](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
