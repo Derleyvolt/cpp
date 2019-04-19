@@ -1,88 +1,88 @@
 - #### Flood fill
 - #### Ray casting
 - #### Lossless compression algorithms
-  - Lempel-Ziv compression 
-  - Huffman coding
-  - bzip2
-  - PNG
-  - Lossless video compression
-  - Zip (file format)
+  - [ ] Lempel-Ziv compression 
+  - [ ] Huffman coding
+  - [ ] bzip2
+  - [ ] PNG
+  - [ ] Lossless video compression
+  - [ ] Zip (file format)
 - #### Lossy compression algorithms
-  - JPEG
+  - [ ] JPEG
 - #### Cryptograph algorithms
-  - RC4
-  - Blowfish
-  - AES
+  - [ ] RC4
+  - [ ] Blowfish
+  - [ ] AES
 - ####  Autentication algorithms
-  - SHA
-  - MD5
-  - HMAC
+  - [ ] SHA
+  - [ ] MD5
+  - [ ] HMAC
 - #### Image processing
-  - Spatial Lowpass
-  - Spatial Highpass
-  - Fourier Representation
-  - Fourier Lowpass
-  - Fourier Highpass
-  - Edge Detection
+  - [ ] Spatial Lowpass
+  - [ ] Spatial Highpass
+  - [ ] Fourier Representation
+  - [ ] Fourier Lowpass
+  - [ ] Fourier Highpass
+  - [ ] Edge Detection
   - etc..
-- #### Image Scaling [Link](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
+- [ ] Image Scaling [Link](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
 - #### Search
-  - Linear Search
-  - Binary Search
-  - Jump Search
-  - Interpolation Search
-  - Exponential Search
-  - Fibonacci Search
-  - Sublist Search
+  - [ ] Linear Search
+  - [ ] Binary Search
+  - [ ] Jump Search
+  - [ ] Interpolation Search
+  - [ ] Exponential Search
+  - [ ] Fibonacci Search
+  - [ ] Sublist Search
 - #### Sorting
-  - Quicksort
-  - Mergesort
-  - Timsort
-  - Heapsort
-  - Bubble Sort
-  - Insertion Sort
-  - Selection Sort
-  - Tree Sort
-  - Shell Sort
-  - Bucket Sort
-  - Radix Sort
-  - Counting Sort
-  - Cubesort
-- #### Convex hull algorithms
-- #### Collision detection algorithm
-- #### Closest pair problem
-- #### Point in polygon
+  - [ ] Quicksort
+  - [ ] Mergesort
+  - [ ] Timsort
+  - [ ] Heapsort
+  - [ ] Bubble Sort
+  - [ ] Insertion Sort
+  - [ ] Selection Sort
+  - [ ] Tree Sort
+  - [ ] Shell Sort
+  - [ ] Bucket Sort
+  - [ ] Radix Sort
+  - [ ] Counting Sort
+  - [ ] Cubesort
+- [ ] Convex hull algorithms
+- [ ] Collision detection algorithm
+- [ ] Closest pair problem
+- [ ] Point in polygon
 - #### Matrix Transformations
-  - Rotate
-  - Translate
-  - Scale
-- #### Polygon triangulation
+  - [ ] Rotate
+  - [ ] Translate
+  - [ ] Scale
+- [ ] Polygon triangulation
 - #### Clipping
-  - Line clipping
-  - Polygon clipping
-- #### Terrain generator algorithm
-- #### Million particles
+  - [ ] Line clipping
+  - [ ] Polygon clipping
+- [ ] Terrain generator algorithm
+- [ ] Million particles
 - #### Calcular Pi de várias formas [Wiki](https://pt.wikipedia.org/wiki/Pi)
-  - Monte Carlo
-  - Gauss-Legendre
-  - Método de cálculo isolado das decimais
-  - Métodos de séries infinitas
-  - Método de Arquimedes
-- #### Euler Fluids
-- #### Lea Algorithm - Pathfinding Algorithms
-- #### n-body simulation
-- #### Data Structures view?
-- #### Como verificar se um número é primo?
-- #### Euclidean algorithm
-- #### Line drawing algorithm
-- #### Bresenham's line algorithm
-- #### Bresenham’s circle drawing algorithm
-- #### Chart [Wiki](https://en.wikipedia.org/wiki/Chart), [Link](https://www.advsofteng.com/gallery.html)
-- #### Radar verde
-- #### Crivo de Eratóstenes
-- #### Maze generator
+  - [ ] Monte Carlo
+  - [ ] Gauss-Legendre
+  - [ ] Método de cálculo isolado das decimais
+  - [ ] Métodos de séries infinitas
+  - [ ] Método de Arquimedes
+- [ ] Euler Fluids
+- [ ] Lea Algorithm - Pathfinding Algorithms
+- [ ] n-body simulation
+- [ ] Data Structures view?
+- [ ] Como verificar se um número é primo?
+- [ ] Euclidean algorithm
+- [ ] Line drawing algorithm
+- [ ] Bresenham's line algorithm
+- [ ] Bresenham’s circle drawing algorithm
+- [ ] Chart [Wiki](https://en.wikipedia.org/wiki/Chart), [Link](https://www.advsofteng.com/gallery.html)
+- [ ] Radar verde
+- [ ] Crivo de Eratóstenes
+- [ ] Maze generator
 - #### Swarm intelligence [Wiki](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
-  - Boids -> [Boids](https://youtu.be/uMI1QcgfBeU)
-  - Ant colony optimization
-  - Bacterial Growth Simulation -> [Bacterial Growth](http://infection.inquiry-hub.net/)
-- ### Nearest neighbour algorithm [Wiki](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
+  - [ ] Boids -> [Boids](https://youtu.be/uMI1QcgfBeU)
+  - [ ] Ant colony optimization
+  - [ ] Bacterial Growth Simulation -> [Bacterial Growth](http://infection.inquiry-hub.net/)
+- [ ] Nearest neighbour algorithm [Wiki](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
