@@ -25,7 +25,9 @@
   - [ ] Fourier Lowpass
   - [ ] Fourier Highpass
   - [ ] Edge Detection
+--------------------------------
 - [ ] Image Scaling [Link](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
+--------------------------------
 - ## Search
   - [ ] Linear Search
   - [ ] Binary Search
