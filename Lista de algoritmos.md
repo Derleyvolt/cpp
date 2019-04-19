@@ -1,31 +1,28 @@
-- ## Lossless compression
+- #### Lossless compression
   - [ ] Lempel-Ziv compression 
   - [ ] Huffman coding
   - [ ] bzip2
   - [ ] PNG
   - [ ] Lossless video compression
   - [ ] Zip (file format)
-- ## Lossy compression
+- #### Lossy compression
   - [ ] JPEG
-- ## Cryptograph
+- #### Cryptograph
   - [x] RC4
   - [ ] Blowfish
   - [ ] AES
-- ##  Autentication
+- ####  Autentication
   - [ ] SHA
   - [x] MD5
   - [ ] HMAC
-- ## Image processing
+- #### Image processing
   - [ ] Spatial Lowpass
   - [ ] Spatial Highpass
   - [ ] Fourier Representation
   - [ ] Fourier Lowpass
   - [ ] Fourier Highpass
   - [ ] Edge Detection
---------------------------------
-- [ ] Image Scaling [Link](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
---------------------------------
-- ## Search
+- #### Search
   - [ ] Linear Search
   - [ ] Binary Search
   - [ ] Jump Search
@@ -33,7 +30,7 @@
   - [ ] Exponential Search
   - [ ] Fibonacci Search
   - [ ] Sublist Search
-- ## Sorting
+- #### Sorting
   - [ ] Quicksort
   - [ ] Mergesort
   - [ ] Timsort
@@ -47,26 +44,28 @@
   - [ ] Radix Sort
   - [ ] Counting Sort
   - [ ] Cubesort
-- ## Matrix Transformations
+- #### Matrix Transformations
   - [ ] Rotate
   - [ ] Translate
   - [ ] Scale
-- ## Clipping
+- #### Clipping
   - [ ] Line clipping
   - [ ] Polygon clipping
-- ## Calcular Pi de várias formas [Wiki](https://pt.wikipedia.org/wiki/Pi)
+- #### Calcular Pi de várias formas [Wiki](https://pt.wikipedia.org/wiki/Pi)
   - [ ] Monte Carlo
   - [ ] Gauss-Legendre
   - [ ] Método de cálculo isolado das decimais
   - [ ] Métodos de séries infinitas
   - [ ] Método de Arquimedes
-- ## Line drawing
+- #### Line drawing
   - [ ] Bresenham's line
   - [ ] Bresenham’s circle drawing
-- ## Swarm intelligence [Wiki](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
+- #### Swarm intelligence [Wiki](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
   - [ ] Boids -> [Boids](https://youtu.be/uMI1QcgfBeU)
   - [ ] Ant colony optimization
   - [ ] Bacterial Growth Simulation -> [Bacterial Growth](http://infection.inquiry-hub.net/)
+- #### 
+- [ ] Image Scaling [Link](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
 - [ ] Convex hull
 - [ ] Collision detection
 - [ ] Closest pair problem
