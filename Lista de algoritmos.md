@@ -50,41 +50,51 @@
   - [ ] Radix Sort
   - [ ] Counting Sort
   - [ ] Cubesort
+--------------------------------
 - [ ] Convex hull
 - [ ] Collision detection
 - [ ] Closest pair problem
 - [ ] Point in polygon
+--------------------------------
 - ## Matrix Transformations
   - [ ] Rotate
   - [ ] Translate
   - [ ] Scale
-- [ ] Polygon triangulation
 - ## Clipping
   - [ ] Line clipping
   - [ ] Polygon clipping
+--------------------------------
 - [ ] Terrain generator
 - [ ] Million particles
+- [ ] Polygon triangulation
+--------------------------------
 - ## Calcular Pi de várias formas [Wiki](https://pt.wikipedia.org/wiki/Pi)
   - [ ] Monte Carlo
   - [ ] Gauss-Legendre
   - [ ] Método de cálculo isolado das decimais
   - [ ] Métodos de séries infinitas
   - [ ] Método de Arquimedes
+--------------------------------
 - [ ] Euler Fluids
 - [ ] Lea Algorithm - Pathfinding Algorithms
 - [ ] n-body simulation
 - [ ] Data Structures view?
 - [ ] Como verificar se um número é primo?
 - [ ] Euclidean algorithm
+--------------------------------
 - ## Line drawing
   - [ ] Bresenham's line
   - [ ] Bresenham’s circle drawing
+--------------------------------
 - [ ] Chart [Wiki](https://en.wikipedia.org/wiki/Chart), [Link](https://www.advsofteng.com/gallery.html)
 - [ ] Radar verde
 - [ ] Crivo de Eratóstenes
 - [ ] Maze generator
+--------------------------------
 - ## Swarm intelligence [Wiki](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
   - [ ] Boids -> [Boids](https://youtu.be/uMI1QcgfBeU)
   - [ ] Ant colony optimization
   - [ ] Bacterial Growth Simulation -> [Bacterial Growth](http://infection.inquiry-hub.net/)
+--------------------------------
 - [ ] Nearest neighbour [Wiki](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
+--------------------------------
