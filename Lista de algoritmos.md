@@ -1,5 +1,6 @@
 - [ ] Flood fill
 - [ ] Ray casting
+--------------------------------
 - ## Lossless compression
   - [ ] Lempel-Ziv compression 
   - [ ] Huffman coding
