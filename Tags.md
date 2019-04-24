@@ -1,0 +1,3 @@
+- [Iterators](https://en.wikipedia.org/wiki/Iterator)
+- [Sliding Windows](https://www.geeksforgeeks.org/window-sliding-technique/)
+- [Pipeline](https://en.wikipedia.org/wiki/Pipeline_(computing))
