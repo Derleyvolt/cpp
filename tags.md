@@ -5,3 +5,4 @@
 - [Pipeline](https://en.wikipedia.org/wiki/Pipeline_(computing))
 - [Switch context](https://en.wikipedia.org/wiki/Context_switch)
 - [Hash function](https://en.wikipedia.org/wiki/Hash_function)
+- [Heuristic](https://en.wikipedia.org/wiki/Heuristic)
