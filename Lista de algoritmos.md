@@ -89,3 +89,5 @@
 - [ ] [Maze generator](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
 - [ ] [Nearest neighbour](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
 - [ ] [Hidden-surface determination](https://en.wikipedia.org/wiki/Hidden-surface_determination)
+- [ ] [Binary GCD algorithm](https://en.wikipedia.org/wiki/Binary_GCD_algorithm) 
+- [ ] [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) 
