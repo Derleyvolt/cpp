@@ -10,3 +10,5 @@
 - [List of Data structure](https://en.wikipedia.org/wiki/List_of_data_structures)
 - [Greedy algorithms](https://en.wikipedia.org/wiki/Greedy_algorithm)
 - [Deterministic algorithm](https://en.wikipedia.org/wiki/Deterministic_algorithm)
+- [Complexidade de tempo](https://pt.wikipedia.org/wiki/Complexidade_de_Tempo)
+- [NP completo](https://pt.wikipedia.org/wiki/NP-completo)
