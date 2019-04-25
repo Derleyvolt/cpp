@@ -64,6 +64,9 @@
   - [ ] [Boids](https://youtu.be/uMI1QcgfBeU)
   - [ ] Ant colony optimization
   - [ ] [Bacterial Growth Simulation](http://infection.inquiry-hub.net/)
+- #### Strings
+  - [ ] [Boyer Moore string search algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm)
+  - [ ] [Approximate string matching](https://en.wikipedia.org/wiki/Approximate_string_matching)
 - #### Algoritmos individuais
 - [ ] [Image Scaling](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
 - [ ] [Convex hull](https://en.wikipedia.org/wiki/Convex_hull)
