@@ -8,3 +8,4 @@
 - [Heuristic](https://en.wikipedia.org/wiki/Heuristic)
 - [Lista de termos relacionados com Data structure e Algorithms](https://en.wikipedia.org/wiki/List_of_terms_relating_to_algorithms_and_data_structures).
 - [List of Data structure](https://en.wikipedia.org/wiki/List_of_data_structures)
+- [Greedy algorithms](https://en.wikipedia.org/wiki/Greedy_algorithm)
