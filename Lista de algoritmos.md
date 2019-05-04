@@ -75,7 +75,7 @@
 - [ ] [Point in polygon](https://en.wikipedia.org/wiki/Point_in_polygon)
 - [ ] [Flood fill](https://en.wikipedia.org/wiki/Flood_fill)
 - [ ] [Ray casting](https://en.wikipedia.org/wiki/Ray_casting)
-- [ ] [Terrain generator](https://en.wikipedia.org/wiki/Diamond-square_algorithm)
+- [ ] [Terrain generator](https://courses.cs.ut.ee/student_projects/download/98.pdf)
 - [ ] Million particles
 - [ ] [Polygon triangulation](https://en.wikipedia.org/wiki/Polygon_triangulation)
 - [ ] [Euler Fluids](https://en.wikipedia.org/wiki/Euler_equations_(fluid_dynamics))
