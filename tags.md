@@ -12,3 +12,4 @@
 - [Deterministic algorithm](https://en.wikipedia.org/wiki/Deterministic_algorithm)
 - [Complexidade de tempo](https://pt.wikipedia.org/wiki/Complexidade_de_Tempo)
 - [NP completo](https://pt.wikipedia.org/wiki/NP-completo)
+- [Geometria computacional](https://en.wikipedia.org/wiki/Computational_geometry)
