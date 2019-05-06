@@ -92,3 +92,7 @@
 - [ ] [Binary GCD algorithm](https://en.wikipedia.org/wiki/Binary_GCD_algorithm) 
 - [ ] [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) 
 - [ ] [Art gallery problem](https://en.wikipedia.org/wiki/Art_gallery_problem)
+- [ ] [XOR swap algorithm](https://en.wikipedia.org/wiki/XOR_swap_algorithm)
+- [ ] [Double dabble](https://en.wikipedia.org/wiki/Double_dabble)
+- [ ] [Kadane’s algorithm](https://www.techiedelight.com/maximum-subarray-problem-kadanes-algorithm/)
+- [ ] [Floyd’s cycle detection algorithm](https://www.techiedelight.com/detect-cycle-linked-list-floyds-cycle-detection-algorithm/)
