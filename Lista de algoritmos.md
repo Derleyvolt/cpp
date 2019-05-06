@@ -57,6 +57,9 @@
   - [ ] Método de cálculo isolado das decimais
   - [ ] Métodos de séries infinitas
   - [ ] Método de Arquimedes
+  - [ ] [Primality Test](https://www.geeksforgeeks.org/primality-test-set-1-introduction-and-school-method/)
+  - [ ] [Primality Test - Fermat Method](https://www.geeksforgeeks.org/primality-test-set-2-fermet-method/)
+  - [ ] [Primality Test - Miller–Rabin](https://www.geeksforgeeks.org/primality-test-set-3-miller-rabin/)
 - #### [Line drawing](https://en.wikipedia.org/wiki/Line_drawing_algorithm)
   - [ ] Bresenham's line
   - [ ] Bresenham’s circle drawing
