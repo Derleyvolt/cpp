@@ -13,3 +13,4 @@
 - [Complexidade de tempo](https://pt.wikipedia.org/wiki/Complexidade_de_Tempo)
 - [NP completo](https://pt.wikipedia.org/wiki/NP-completo)
 - [Geometria computacional](https://en.wikipedia.org/wiki/Computational_geometry)
+- [list of problems](https://www.techiedelight.com/list-of-problems/)
