@@ -14,3 +14,4 @@
 - [NP completo](https://pt.wikipedia.org/wiki/NP-completo)
 - [Geometria computacional](https://en.wikipedia.org/wiki/Computational_geometry)
 - [list of problems](https://www.techiedelight.com/list-of-problems/)
+- [list of problems](https://www.techiedelight.com/Tags/hashing/)
