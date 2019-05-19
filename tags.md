@@ -18,3 +18,4 @@
 - [Hill climbing](https://en.wikipedia.org/wiki/Hill_climbing)
 - [Pseudorandom number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator)
 - [Fourier Transform](http://www.thefouriertransform.com/#introduction)
+- [Algoritmo de fluxo](https://pt.wikipedia.org/wiki/Algoritmo_de_Ford-Fulkerson)
