@@ -79,6 +79,8 @@
 - [ ] [Flood fill - visual](https://en.wikipedia.org/wiki/Flood_fill)
 - [ ] [Ray casting - visual](https://en.wikipedia.org/wiki/Ray_casting)
 - [ ] [Terrain generator - visual](https://courses.cs.ut.ee/student_projects/download/98.pdf)
+- [ ] [Largest empty rectangle - visual](https://en.wikipedia.org/wiki/Largest_empty_rectangle)
+- [ ] [Largest empty sphere - visual](https://en.wikipedia.org/wiki/Largest_empty_sphere)
 - [ ] Million particles
 - [ ] [QuadTree - visual](https://en.wikipedia.org/wiki/Quadtree)
 - [ ] [Polygon triangulation - visual](https://en.wikipedia.org/wiki/Polygon_triangulation)
