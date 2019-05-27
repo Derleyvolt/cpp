@@ -52,7 +52,7 @@
   - [ ] Line clipping
   - [ ] Polygon clipping
 - #### [Pi](https://pt.wikipedia.org/wiki/Pi)
-  - [ ] Monte Carlo
+  - [ ] Monte Carlo - visual
   - [ ] Gauss-Legendre
   - [ ] Método de cálculo isolado das decimais
   - [ ] Métodos de séries infinitas
@@ -72,30 +72,31 @@
   - [ ] [Approximate string matching](https://en.wikipedia.org/wiki/Approximate_string_matching)
 - #### Algoritmos individuais
 - [ ] [Image Scaling](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
-- [ ] vs [Convex hull](https://en.wikipedia.org/wiki/Convex_hull)
-- [ ] vs [Collision detection](https://en.wikipedia.org/wiki/Collision_detection)
-- [ ] vs [Closest pair problem](https://en.wikipedia.org/wiki/Closest_pair_of_points_problem)
-- [ ] vs [Point in polygon](https://en.wikipedia.org/wiki/Point_in_polygon)
-- [ ] vs [Flood fill](https://en.wikipedia.org/wiki/Flood_fill)
-- [ ] vs [Ray casting](https://en.wikipedia.org/wiki/Ray_casting)
-- [ ] vs [Terrain generator](https://courses.cs.ut.ee/student_projects/download/98.pdf)
+- [ ] [Convex hull - visual](https://en.wikipedia.org/wiki/Convex_hull)
+- [ ] [Collision detection - visual](https://en.wikipedia.org/wiki/Collision_detection)
+- [ ] [Closest pair problem - visual](https://en.wikipedia.org/wiki/Closest_pair_of_points_problem)
+- [ ] [Point in polygon - visual](https://en.wikipedia.org/wiki/Point_in_polygon)
+- [ ] [Flood fill - visual](https://en.wikipedia.org/wiki/Flood_fill)
+- [ ] [Ray casting - visual](https://en.wikipedia.org/wiki/Ray_casting)
+- [ ] [Terrain generator - visual](https://courses.cs.ut.ee/student_projects/download/98.pdf)
 - [ ] Million particles
-- [ ] vs [QuadTree](https://en.wikipedia.org/wiki/Quadtree)
-- [ ] vs [Polygon triangulation](https://en.wikipedia.org/wiki/Polygon_triangulation)
+- [ ] [QuadTree - visual](https://en.wikipedia.org/wiki/Quadtree)
+- [ ] [Polygon triangulation - visual](https://en.wikipedia.org/wiki/Polygon_triangulation)
 - [ ] [Euler Fluids](https://en.wikipedia.org/wiki/Euler_equations_(fluid_dynamics))
 - [ ] [Lea Algorithm](https://en.wikipedia.org/wiki/Lee_algorithm)
 - [ ] [n-body simulation](https://en.wikipedia.org/wiki/N-body_simulation)
 - [ ] Data Structures view?
 - [ ] [Primality test](https://en.wikipedia.org/wiki/Primality_test)
 - [ ] Euclidean algorithm
-- [ ] vs [Euclidean shortest path](https://en.wikipedia.org/wiki/Euclidean_shortest_path)
-- [ ] vs [Chart](https://en.wikipedia.org/wiki/Chart) -> [resource](https://www.advsofteng.com/gallery.html)
+- [ ] [Euclidean shortest path - visual](https://en.wikipedia.org/wiki/Euclidean_shortest_path)
+- [ ] [Chart - visual](https://en.wikipedia.org/wiki/Chart) -> [resource](https://www.advsofteng.com/gallery.html)
 - [ ] Radar
-- [ ] vs [Maze generator](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
-- [ ] vs [Nearest neighbour](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
+- [ ] [Maze generator](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
+- [ ] [Nearest neighbour - visual](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
 - [ ] [Hidden-surface determination](https://en.wikipedia.org/wiki/Hidden-surface_determination)
 - [ ] [Binary GCD algorithm](https://en.wikipedia.org/wiki/Binary_GCD_algorithm) 
-- [ ] vs [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) 
+- [ ] [Dijkstra's algorithm - visual](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) 
+- [ ] [A* search algorithm - visual](https://en.wikipedia.org/wiki/A*_search_algorithm)
 - [ ] [Art gallery problem](https://en.wikipedia.org/wiki/Art_gallery_problem)
 - [ ] [XOR swap algorithm](https://en.wikipedia.org/wiki/XOR_swap_algorithm)
 - [ ] [Double dabble](https://en.wikipedia.org/wiki/Double_dabble)
