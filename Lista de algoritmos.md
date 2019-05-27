@@ -82,6 +82,7 @@
 - [ ] [Largest empty rectangle - visual](https://en.wikipedia.org/wiki/Largest_empty_rectangle)
 - [ ] [Largest empty sphere - visual](https://en.wikipedia.org/wiki/Largest_empty_sphere)
 - [ ] [Bounding sphere - visual](https://en.wikipedia.org/wiki/Bounding_sphere)
+- [ ] [Bounding volume - visual](https://en.wikipedia.org/wiki/Bounding_volume)
 - [ ] Million particles
 - [ ] [QuadTree - visual](https://en.wikipedia.org/wiki/Quadtree)
 - [ ] [Polygon triangulation - visual](https://en.wikipedia.org/wiki/Polygon_triangulation)
