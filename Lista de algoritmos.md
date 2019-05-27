@@ -49,10 +49,10 @@
   - [ ] Translate
   - [ ] Scale
 - #### [Clipping](https://www.tutorialspoint.com/computer_graphics/viewing_and_clipping.htm)
-  - [ ] Line clipping
-  - [ ] Polygon clipping
+  - [ ] [Line clipping - visual](https://en.wikipedia.org/wiki/Line_clipping)
+  - [ ] [Polygon clipping - visual](https://en.wikipedia.org/wiki/Sutherland%E2%80%93Hodgman_algorithm)
 - #### [Pi](https://pt.wikipedia.org/wiki/Pi)
-  - [ ] Monte Carlo - visual
+  - [ ] [Monte Carlo - visual](https://en.wikipedia.org/wiki/Monte_Carlo_method)
   - [ ] Gauss-Legendre
   - [ ] Método de cálculo isolado das decimais
   - [ ] Métodos de séries infinitas
@@ -61,8 +61,8 @@
   - [ ] [Primality Test - Fermat Method](https://www.geeksforgeeks.org/primality-test-set-2-fermet-method/)
   - [ ] [Primality Test - Miller–Rabin](https://www.geeksforgeeks.org/primality-test-set-3-miller-rabin/)
 - #### [Line drawing](https://en.wikipedia.org/wiki/Line_drawing_algorithm)
-  - [ ] Bresenham's line
-  - [ ] Bresenham’s circle drawing
+  - [ ] [Bresenham's line - visual](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm)
+  - [ ] [Bresenham’s circle drawing - visual](https://en.wikipedia.org/wiki/Midpoint_circle_algorithm)
 - #### [Swarm intelligence](https://en.wikipedia.org/wiki/Swarm_intelligence#Ant_colony_optimization_(Dorigo_1992))
   - [ ] [Boids](https://youtu.be/uMI1QcgfBeU)
   - [ ] Ant colony optimization
