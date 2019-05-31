@@ -70,6 +70,7 @@
 - #### Strings
   - [ ] [Boyer Moore string search algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm)
   - [ ] [Approximate string matching](https://en.wikipedia.org/wiki/Approximate_string_matching)
+  - [ ] [String search algorithms](https://en.wikipedia.org/wiki/String-searching_algorithm)
 - #### Algoritmos individuais
 - [ ] [Image Scaling](http://courses.cs.vt.edu/~masc1044/L17-Rotation/ScalingNN.html)
 - [ ] [Convex hull - visual](https://en.wikipedia.org/wiki/Convex_hull)
