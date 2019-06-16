@@ -23,3 +23,4 @@
 - [Primos de mersenne](https://pt.wikipedia.org/wiki/Primo_de_Mersenne)
 - [Lode Vandevenne](https://lodev.org/cgtutor/index.html)
 - [Thread pool](https://en.wikipedia.org/wiki/Thread_pool)
+- [Concurrency pattern](https://en.wikipedia.org/wiki/Concurrency_pattern)
